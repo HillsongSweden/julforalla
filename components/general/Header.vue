@@ -1,17 +1,10 @@
 <template>
-  <nav class="">
-    <ul class="flex fixed top-0 inset-x-0 p-3">
-      <li class="flex-1 mr-2">
-        <nuxt-link class="btn block" to="/">Home</nuxt-link>
-      </li>
-      <li class="flex-1 mr-2">
-        <nuxt-link class="btn block" to="/blog">Blog</nuxt-link>
-      </li>
-      <li class="flex-1">
-        <nuxt-link class="btn block" to="/projects">Projects</nuxt-link>
-      </li>
-    </ul>
-  </nav>
+  <header class="flex fixed top-0 inset-x-0 p-3 bg-primary-50 dark:bg-primary-800">
+    <h1 class="flex-1 mr-2 text-2xl">
+      En Jul För Alla
+    </h1>
+    <button class="icon">Ge julklapp</button>
+  </header>
 </template>
 
 <script>

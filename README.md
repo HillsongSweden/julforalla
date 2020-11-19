@@ -1,12 +1,10 @@
 # 🏗️ Boilerplate for Nuxt, Tailwind & NetlifyCMS
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/cb2d4cc5-8a65-4940-81ce-4456ff96e6db/deploy-status)](https://app.netlify.com/sites/ntn-boilerplate/deploys) ← replace with [your own](https://app.netlify.com/sites/YOUR_NETLIFY_SITE_SLUG/settings/general#deploy-status-badge)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cb2d4cc5-8a65-4940-81ce-4456ff96e6db/deploy-status)](https://app.netlify.com/sites/julforalla/deploys) ← replace with [your own](https://app.netlify.com/sites/YOUR_NETLIFY_SITE_SLUG/settings/general#deploy-status-badge)
 
-**[Live Demo](https://ntn-boilerplate.netlify.app/)**
+**[Live Demo](https://julforalla.netlify.app/)**
 
 An opinionated starter template for a quick start with the following technologies up on a site after only 5 minutes!
-
-![NTN Boilerplate Screenshot](https://user-images.githubusercontent.com/770560/92640923-4a36fa80-f2de-11ea-8f96-a7bca7b1e0cc.png)
 
 ## 🔋 Batteries included
 
@@ -30,7 +28,7 @@ An opinionated starter template for a quick start with the following technologie
 
 Use the deploy button to get your own copy of the repository.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/knogobert/ntn-boilerplate&stack=cms)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/knogobert/julforalla&stack=cms)
 
 This will setup everything needed for running the CMS:
  - A new repository in your GitHub account with the code

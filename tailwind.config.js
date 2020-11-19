@@ -11,21 +11,22 @@ module.exports = {
     darkSelector: '.dark-mode',
     extend: {
       fontFamily: {
-        sans: ['Karla', ...defaultTheme.fontFamily.sans],
+        sans: ['Manrope', ...defaultTheme.fontFamily.sans],
         mono: [...defaultTheme.fontFamily.mono]
       },
       colors: {
         primary: {
-          100: '#ECEFF5',
-          200: '#CBD2E1',
-          300: '#ABB6CD',
-          400: '#8C9AB7',
-          500: '#6F7FA0',
-          default: '#526488',
-          600: '#3E4F70',
-          700: '#2C3A57',
-          800: '#1C263B',
-          900: '#0D131E'
+          50: '#F9FAFB',
+          100: '#F3F4F6',
+          200: '#E5E7EB',
+          300: '#D1D5DB',
+          400: '#9CA3AF',
+          default: '#6B7280',
+          500: '#6B7280',
+          600: '#4B5563',
+          700: '#374151',
+          800: '#1F2937',
+          900: '#111827'
         },
         accent: {
           100: '#F9E9EA',
