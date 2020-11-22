@@ -80,7 +80,7 @@ dist
 # IDE / Editor
 .idea
 .editorconfig
-.code-workspace
+*.code-workspace
 
 # Service worker
 sw.*

@@ -3,6 +3,7 @@
     <h1 class="flex-1 mr-2 text-2xl">
       En Jul För Alla
     </h1>
+    <p class="subtitle">Ge en julklapp till ett barn som annars blir utan</p>
     <button class="icon">Ge julklapp</button>
   </header>
 </template>
