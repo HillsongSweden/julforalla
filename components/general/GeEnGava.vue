@@ -1,6 +1,6 @@
 <template>
   <transition name="slide-left-full">
-    <aside class="fixed mx-auto inset-0 bg-cream" v-show="isOpen">
+    <aside class="fixed overflow-y-auto mx-auto inset-0 bg-cream" v-show="isOpen">
       <div class="float-left m-2" @click="closeDrawer">
         <svg width="100" height="100" viewBox="0 0 148 148" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M81.9303 46.0148L78.9056 43L50 72L78.9056 101L81.9303 97.9852L56.0298 72L81.9303 46.0148Z" fill="black"/>
@@ -8,22 +8,37 @@
       </div>
       <div class="bg-primary-600 mx-auto my-8" style="height: 140px; width: 100px;"></div>
       <h3 class="text-black text-5xl text-center mb-8">Ge en gåva</h3>
-      <form name="gava" method="POST" data-netlify="true" @submit="showAlert" class="flex flex-wrap">
+
+      <form name="gava" method="POST" data-netlify="true" @submit="submitHandler" class="flex flex-wrap mx-auto max-w-xs">
         <FormulateInput
           v-model="formCategory"
           type="select"
           :options="{matkasse: 'Matkasse', julklapp: 'Julklapp'}"
           name="category"
+          label="Vad vill du ge?"
           placeholder="Välj matkasse eller julklapp"
           validation="in:matkasse,julklapp"
         />
-        <FormulateInput v-model="formMessage" type="textarea" name="message" placeholder="Skriv en hälsning till en familj... (valfritt)" />
-        <FormulateInput v-model="formEmail" type="email"  name="email" placeholder="Email (valfritt)" label="Om du vill ha återkoppling när vi gett gåvorna så får du gärna fylla i din email" validation="email" />
-        <FormulateInput
-          type="submit"
-          name="Swisha gåva"
-        />
+        <template v-if="formCategory !== ''">
+          <FormulateInput v-model="formAmount" type="number" name="amount" placeholder="Hur mycket vill du ge?" help-position="before" help="Hur mycket vill du ge?" min="1" max="100000" validation="required|number" class="form-help-inside"/>
+
+          <div class="formulate-input" style="margin-top: -1rem;">
+            <div class="formulate-input-help formulate-input-help--after">{{ formAmountHelpText }}</div>
+          </div>
+
+          <FormulateInput v-model="formMessage" type="textarea" name="message" placeholder="Skriv en hälsning till en familj... (valfritt)" help-position="before" help="Din hälsning (valfritt)" class="form-help-inside"/>
+
+          <FormulateInput v-model="formEmail" type="email" name="email" placeholder="Email (valfritt)" help-position="before" help="Om du vill ha återkoppling när vi gett gåvorna så får du gärna fylla i din email." validation="email" />
+
+          <FormulateInput v-model="formGDPR" type="checkbox" name="gdpr" label="Godkännande av hantering av personuppgifter. De uppgifter som du lämnar i detta formulär kommer hanteras konfidentiellt, och vi kommer inte lämna vidare dina uppgifter till någon utanför Hillsongs organisation." validation="required" />
+
+          <FormulateInput
+            type="submit"
+            name="Swisha gåva"
+          />
+        </template>
       </form>
+
     </aside>
   </transition>
 </template>
@@ -34,12 +49,19 @@ import { EventBus } from '~/utils/EventBus.js';
 export default {
   data: () => ({
     isOpen: false,
-    formCategory: '',
+    formCategory: 'matkasse',
     formAmount: null,
     formMessage: '',
     formEmail: '',
     formGDPR: false,
   }),
+  computed: {
+    formAmountHelpText() {
+      return this.formCategory === 'matkasse'
+        ? 'En matkasse kostar runt 500 kr. Oavsett vad du ger så bidrar det till att vi kan dela ut fler matkassar.'
+        : 'En julklapp kostar runt 200 kr. Oavsett vad du ger så bidrar det till att vi kan dela ut fler julklappar.'
+    },
+  },
   mounted() {
     EventBus.$on('isOpen', (payload) => {
       if (payload === true) this.openDrawer();
@@ -47,8 +69,8 @@ export default {
     })
   },
   methods: {
-    showAlert(evt) {
-      window.alert(evt);
+    submitHandler(evt) {
+      console.log('Submitted!', evt);
     },
     openDrawer(evt) {
       this.isOpen = true;

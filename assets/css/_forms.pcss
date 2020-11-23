@@ -1,15 +1,14 @@
 .formulate-input {
   /* global wrapper styles */
-  @apply font-sans flex-auto w-full;
+  @apply font-sans flex-auto w-full mb-4;
 
   & .formulate-input-label {
     /* global label styles */
-    @apply mx-auto max-w-xs font-normal;
+    @apply font-normal;
   }
 
   & .formulate-input-element {
     /* Global field-level wrapper styles */
-    @apply mx-auto max-w-xs;
   }
 
   & .formulate-input-help {
@@ -32,18 +31,24 @@
   &[data-classification='text'] {
     & input {
       /* Style all text-like input elements */
+      &:focus {
+        @apply border-accent-600;
+      }
     }
   }
 
   &[data-classification='textarea'] {
     & textarea {
       /* Style textareas */
+      &:focus {
+        @apply border-accent-600;
+      }
     }
   }
 
   &[data-classification='button'] {
     & button {
-      @apply block w-full text-center bg-accent rounded py-2 px-4 border border-accent text-white;
+      @apply block w-full text-center bg-accent rounded py-4 px-6 border border-accent text-white;
       &:hover {
         @apply bg-accent-600;
       }
@@ -53,6 +58,9 @@
   &[data-classification='select'] {
     & select {
      /* Style select lists */
+      &:focus {
+        @apply border-accent-600;
+      }
     }
   }
 
@@ -61,13 +69,26 @@
   &[data-classification='box'] {
     & .formulate-input-element {
       /* Box input (checkbox and radio) wrapper (might want flex here) */
-      & input {
-        /* Style box element itself */
+      @apply flex-shrink-0 self-start my-1;
+
+      & label {
+        /* @apply border-accent-600; */
+        /* &::before {
+          @apply border-accent-600;
+        } */
+        &:focus {
+          @apply border-accent-600;
+        }
       }
+      /* & input {
+        @apply border-accent-600;
+        &:focus {
+          @apply border-accent-600;
+        }
+      } */
     }
   }
 }
-
 
 .formulate-form-errors {
   & .formulate-form-error {
