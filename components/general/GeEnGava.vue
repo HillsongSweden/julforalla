@@ -24,6 +24,12 @@
 
 <script>
 export default {
+  props: {
+    open: {
+      type: Boolean,
+      default: false,
+    },
+  },
   methods: {
     showAlert(evt) {
       window.alert(evt);

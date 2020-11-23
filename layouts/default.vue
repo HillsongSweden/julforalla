@@ -1,19 +1,16 @@
 <template>
   <div class="container">
-    <Header />
-    <ColorModePicker />
+    <Intro />
     <nuxt />
   </div>
 </template>
 
 <script>
-import Header from '~/components/general/Header.vue'
-import ColorModePicker from '~/components/general/ColorModePicker.vue'
+import Intro from '~/components/general/Intro.vue'
 
 export default {
   components: {
-    Header,
-    ColorModePicker
+    Intro,
   }
 }
 </script>
