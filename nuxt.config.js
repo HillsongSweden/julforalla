@@ -42,7 +42,7 @@ export default {
     link: [
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap'
+        href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Viaoda+Libre&display=swap'
       }
     ] // ? Imports the font 'Manrope' and is optimized by the netlify plugin 'Subfont'
   },
@@ -54,7 +54,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#f3f5f4' },
+  loading: { color: '#9F341C' },
   /*
    ** Global CSS
    */

@@ -11,34 +11,43 @@ module.exports = {
     darkSelector: '.dark-mode',
     extend: {
       fontFamily: {
-        sans: ['Manrope', ...defaultTheme.fontFamily.sans],
+        serif: ['Viaoda Libre', ...defaultTheme.fontFamily.serif],
+        sans: ['Roboto', ...defaultTheme.fontFamily.sans],
         mono: [...defaultTheme.fontFamily.mono]
       },
       colors: {
         primary: {
-          50: '#F9FAFB',
-          100: '#F3F4F6',
-          200: '#E5E7EB',
-          300: '#D1D5DB',
-          400: '#9CA3AF',
-          default: '#6B7280',
-          500: '#6B7280',
-          600: '#4B5563',
-          700: '#374151',
-          800: '#1F2937',
-          900: '#111827'
+          50: '#FDFEFE',
+          100: '#D9E2E3',
+          200: '#B5C6C7',
+          300: '#93A9AA',
+          400: '#718A8C',
+          default: '#516B6D',
+          500: '#485C5E',
+          600: '#3F4E4F',
+          700: '#364041',
+          800: '#2C3333',
+          900: '#1A1D1E'
         },
         accent: {
-          100: '#F9E9EA',
-          200: '#EEC3C6',
-          300: '#E09FA4',
-          400: '#CF7D83',
-          500: '#BD5D65',
-          default: '#A84048',
-          600: '#8D2D34',
-          700: '#6E1D23',
-          800: '#4D1015',
-          900: '#280709'
+          100: '#F8D5D2',
+          200: '#EDB1A8',
+          300: '#DF8E7E',
+          400: '#CD6E58',
+          500: '#B85038',
+          default: '#9F341C',
+          600: '#843220',
+          700: '#6B2F21',
+          800: '#542A21',
+          900: '#3F241E'
+        },
+        cream: {
+          default: '#EFE5C7'
+        },
+        gray: {
+          ...defaultTheme.colors.gray,
+          default: '#949494',
+          500: '#909090'
         }
       },
       opacity: {

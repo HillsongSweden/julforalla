@@ -1,6 +1,6 @@
 # 🏗️ Boilerplate for Nuxt, Tailwind & NetlifyCMS
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/cb2d4cc5-8a65-4940-81ce-4456ff96e6db/deploy-status)](https://app.netlify.com/sites/julforalla/deploys) ← replace with [your own](https://app.netlify.com/sites/YOUR_NETLIFY_SITE_SLUG/settings/general#deploy-status-badge)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4fea5f99-a287-451a-b96f-408fb922d8e6/deploy-status)](https://app.netlify.com/sites/julforalla/deploys)
 
 **[Live Demo](https://julforalla.netlify.app/)**
 

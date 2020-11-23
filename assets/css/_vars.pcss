@@ -1,100 +1,41 @@
 /**
-  * SCSS Variables
-  *
-  * Generated from https://hihayk.github.io/scale/#4/5/80/90/0/0/60/60/526488/82/100/136/black
-  * $primary: (
-  *   100: '#ECEFF5',
-  *   200: '#CBD2E1',
-  *   300: '#ABB6CD',
-  *   400: '#8C9AB7',
-  *   500: '#6F7FA0',
-  *   default: '#526488',
-  *   600: '#3E4F70',
-  *   700: '#2C3A57',
-  *   800: '#1C263B',
-  *   900: '#0D131E'
-  * );
-  *
-  * Generated from https://hihayk.github.io/scale/#4/5/80/90/0/0/60/60/A84048/168/64/72/black
-  * $accent: (
-  *   100: '#F9E9EA',
-  *   200: '#EEC3C6',
-  *   300: '#E09FA4',
-  *   400: '#CF7D83',
-  *   500: '#BD5D65',
-  *   default: '#A84048',
-  *   600: '#8D2D34',
-  *   700: '#6E1D23',
-  *   800: '#4D1015',
-  *   900: '#280709'
-  * );
-*/
-
-/**
   * CSS Variables
   */
 :root {
-  --color-primary-100: theme('colors.primary.100'); /* #ECEFF5 */
-  --color-primary-200: theme('colors.primary.200'); /* #CBD2E1 */
-  --color-primary-300: theme('colors.primary.300'); /* #ABB6CD */
-  --color-primary-400: theme('colors.primary.400'); /* #8C9AB7 */
-  --color-primary-500: theme('colors.primary.500'); /* #6F7FA0 */
-  --color-primary: theme('colors.primary.default'); /* #526488 */
-  --color-primary-600: theme('colors.primary.600'); /* #3E4F70 */
-  --color-primary-700: theme('colors.primary.700'); /* #2C3A57 */
-  --color-primary-800: theme('colors.primary.800'); /* #1C263B */
-  --color-primary-900: theme('colors.primary.900'); /* #0D131E */
+  --color-primary-50: theme('colors.primary.50');   /* #FDFEFE */
+  --color-primary-100: theme('colors.primary.100'); /* #D9E2E3 */
+  --color-primary-200: theme('colors.primary.200'); /* #B5C6C7 */
+  --color-primary-300: theme('colors.primary.300'); /* #93A9AA */
+  --color-primary-400: theme('colors.primary.400'); /* #718A8C */
+  --color-primary: theme('colors.primary.default'); /* #516B6D */
+  --color-primary-500: theme('colors.primary.500'); /* #485C5E */
+  --color-primary-600: theme('colors.primary.600'); /* #3F4E4F */
+  --color-primary-700: theme('colors.primary.700'); /* #364041 */
+  --color-primary-800: theme('colors.primary.800'); /* #2C3333 */
+  --color-primary-900: theme('colors.primary.900'); /* #1A1D1E */
 
-  --color-accent-100: theme('colors.accent.100'); /* #F9E9EA */
-  --color-accent-200: theme('colors.accent.200'); /* #EEC3C6 */
-  --color-accent-300: theme('colors.accent.300'); /* #E09FA4 */
-  --color-accent-400: theme('colors.accent.400'); /* #CF7D83 */
-  --color-accent-500: theme('colors.accent.500'); /* #BD5D65 */
-  --color-accent: theme('colors.accent.default'); /* #A84048 */
-  --color-accent-600: theme('colors.accent.600'); /* #8D2D34 */
-  --color-accent-700: theme('colors.accent.700'); /* #6E1D23 */
-  --color-accent-800: theme('colors.accent.800'); /* #4D1015 */
-  --color-accent-900: theme('colors.accent.900'); /* #280709 */
+  --color-accent-100: theme('colors.accent.100');   /* #F8D5D2 */
+  --color-accent-200: theme('colors.accent.200');   /* #EDB1A8 */
+  --color-accent-300: theme('colors.accent.300');   /* #DF8E7E */
+  --color-accent-400: theme('colors.accent.400');   /* #CD6E58 */
+  --color-accent-500: theme('colors.accent.500');   /* #B85038 */
+  --color-accent: theme('colors.accent.default');   /* #9F341C */
+  --color-accent-600: theme('colors.accent.600');   /* #843220 */
+  --color-accent-700: theme('colors.accent.700');   /* #6B2F21 */
+  --color-accent-800: theme('colors.accent.800');   /* #542A21 */
+  --color-accent-900: theme('colors.accent.900');   /* #3F241E */
 
-  --text: var(--color-primary-100);
-  --text-secondary: var(--color-primary-50);
+  --color-cream: theme('colors.cream.default');     /* #EFE5C7 */
 
-  --bg: var(--color-primary-900); /* used to be #091a28; */
-  --bg-secondary: var(--color-primary-800); /* used to be #071521; */
+  --color-gray: theme('colors.gray.default');       /* #949494 */
+  --color-gray-500: theme('colors.gray.500');       /* #909090 */
 
-  --border-color: var(--color-primary-700); /* used to be #0d2538; */
-  --border-color-secondary: var(--color-primary-600); /* used to be #2d4253; */
-}
+  --text: #000;
+  --text-secondary: #FFF;
 
-.light-mode {
-  --color-primary-100: theme('colors.primary.100'); /* #ECEFF5 */
-  --color-primary-200: theme('colors.primary.200'); /* #CBD2E1 */
-  --color-primary-300: theme('colors.primary.300'); /* #ABB6CD */
-  --color-primary-400: theme('colors.primary.400'); /* #8C9AB7 */
-  --color-primary-500: theme('colors.primary.500'); /* #6F7FA0 */
-  --color-primary: theme('colors.primary.default'); /* #526488 */
-  --color-primary-600: theme('colors.primary.600'); /* #3E4F70 */
-  --color-primary-700: theme('colors.primary.700'); /* #2C3A57 */
-  --color-primary-800: theme('colors.primary.800'); /* #1C263B */
-  --color-primary-900: theme('colors.primary.900'); /* #0D131E */
+  --bg: var(--color-cream);
+  --bg-secondary: var(--color-primary);
 
-  --color-accent-100: theme('colors.accent.100'); /* #F9E9EA */
-  --color-accent-200: theme('colors.accent.200'); /* #EEC3C6 */
-  --color-accent-300: theme('colors.accent.300'); /* #E09FA4 */
-  --color-accent-400: theme('colors.accent.400'); /* #CF7D83 */
-  --color-accent-500: theme('colors.accent.500'); /* #BD5D65 */
-  --color-accent: theme('colors.accent.default'); /* #A84048 */
-  --color-accent-600: theme('colors.accent.600'); /* #8D2D34 */
-  --color-accent-700: theme('colors.accent.700'); /* #6E1D23 */
-  --color-accent-800: theme('colors.accent.800'); /* #4D1015 */
-  --color-accent-900: theme('colors.accent.900'); /* #280709 */
-
-  --text: var(--color-primary-900); /* used to be #158876; #35495e; #243746; */
-  --text-secondary: var(--color-primary-800); /* used to be #0e2233; #526488 */
-
-  --bg: var(--color-primary-100); /* used to be #f3f5f4; */
-  --bg-secondary: var(--color-primary-200); /* used to be #fff; */
-
-  --border-color: var(--color-primary-400); /* used to be #ddd; */
-  --border-color-secondary: var(--color-primary-500); /* used to be #c9ccd0; */
+  --border-color: var(--color-accent);
+  --border-color-secondary: var(--color-gray-500);
 }
