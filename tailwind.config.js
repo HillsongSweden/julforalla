@@ -8,7 +8,6 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   theme: {
-    darkSelector: '.dark-mode',
     extend: {
       fontFamily: {
         serif: ['Viaoda Libre', ...defaultTheme.fontFamily.serif],
@@ -60,18 +59,14 @@ module.exports = {
       outline: '0 0 0 3px rgba(0, 86, 87,0.5)'
     }
   },
-  variants: {
-    backgroundColor: ['dark', 'dark-hover', 'dark-group-hover'],
-    borderColor: ['dark', 'dark-focus', 'dark-focus-within'],
-    textColor: ['dark', 'dark-hover', 'dark-active']
-  },
-  plugins: [require('tailwindcss-dark-mode')()],
+  variants: {},
+  plugins: [],
   purge: {
     // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
     enabled: process.env.NODE_ENV === 'production',
     content: ['components/**/*.vue', 'layouts/**/*.vue', 'pages/**/*.vue', 'plugins/**/*.js', 'nuxt.config.js'],
     options: {
-      // Set whitelist in nuxt.config.js -> purgeCSS.whitelist: ['dark-mode', 'light-mode', 'btn', 'icon']
+      // Set whitelist in nuxt.config.js -> purgeCSS.whitelist: ['btn', 'icon']
     }
   }
 }

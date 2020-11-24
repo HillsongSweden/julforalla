@@ -1,10 +1,9 @@
-# 🏗️ Boilerplate for Nuxt, Tailwind & NetlifyCMS
+# 🎄 JulFörAlla
+## Using Nuxt, Tailwind & NetlifyCMS
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4fea5f99-a287-451a-b96f-408fb922d8e6/deploy-status)](https://app.netlify.com/sites/julforalla/deploys)
 
 **[Live Demo](https://julforalla.netlify.app/)**
-
-An opinionated starter template for a quick start with the following technologies up on a site after only 5 minutes!
 
 ## 🔋 Batteries included
 
@@ -14,7 +13,6 @@ An opinionated starter template for a quick start with the following technologie
 - PostCSS (no SCSS)
 - Tailwind
 - PurgeCSS (removes unused CSS-selectors)
-- Dark mode & custom ColorModePicker (Set to "dark mode first")
 - PWA (install website as standalone app)
 - Netlify CMS (no need for a separate server)
 - Prettier
