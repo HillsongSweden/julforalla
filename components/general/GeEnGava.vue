@@ -72,8 +72,10 @@ export default {
   methods: {
     submitHandler(evt) {
       console.log('Submitted!', evt);
+      // return placeholder promise
+      return Promise.resolve();
       // TODO: replace with supported request lib or polyfill fetch
-      return fetch("/", {
+      /*return fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: this.encode({
@@ -84,7 +86,7 @@ export default {
           email: this.formEmail,
           gdpr: this.formGDPR,
         })
-      })
+      })*/
     },
     openDrawer(evt) {
       this.isOpen = true;
