@@ -9,10 +9,10 @@
 
       <div class="relative mx-auto my-8" style="height: 230px; width: 300px;">
         <transition name="slide-left">
-          <nuxt-image v-show="formCategory !== 'matkasse'" src="/img/julklapp-opt.png" width="300" height="260" fit="contain" class="absolute inset-0 z-20 transition-all ease-in-out duration-200" :class="{ 'package-right': formCategory === 'julklapp' }" style="position: absolute; overflow: visible;"/>
+          <nuxt-image v-show="formCategory !== 'matkasse'" src="/img/julklapp-opt.png" width="300" height="260" fit="contain" class="absolute inset-0 z-20 transition ease-in-out duration-200" :class="{ 'package-right': formCategory === 'julklapp' }" style="position: absolute; overflow: visible;"/>
         </transition>
         <transition name="slide-right">
-        <nuxt-image v-show="formCategory !== 'julklapp'" src="/img/matkasse-opt.png" width="300" height="260" fit="contain" class="absolute inset-0 z-10 transition-all ease-in-out duration-200" :class="{ 'package-left': formCategory === 'matkasse' }" style="position: absolute; overflow: visible;"/>
+        <nuxt-image v-show="formCategory !== 'julklapp'" src="/img/matkasse-opt.png" width="300" height="260" fit="contain" class="absolute inset-0 z-10 transition ease-in-out duration-200" :class="{ 'package-left': formCategory === 'matkasse' }" style="position: absolute; overflow: visible;"/>
         </transition>
       </div>
 

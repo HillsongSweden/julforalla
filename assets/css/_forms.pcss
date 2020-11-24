@@ -115,6 +115,7 @@
     }
   }
 
+  /*! purgecss start ignore */
   /* CUSTOM */
   &.form-radio-choices {
     &[data-classification='group'] {
@@ -167,15 +168,16 @@
   &.form-help-inside {
     @apply relative;
     & .formulate-input-help {
-      @apply opacity-0 transition-all ease-in duration-150 transform translate-y-2 absolute top-0 m-2 pointer-events-none;
+      @apply opacity-0 transition ease-in duration-150 transform translate-y-2 absolute top-0 m-2 pointer-events-none;
     }
     & .formulate-input-element {
-      @apply transition-all;
+      @apply transition;
       /* & input {
-        @apply transition-all;
+        @apply transition;
       } */
     }
 
+    &[data-is-showing-errors="true"],
     &[data-has-value="true"] {
       & .formulate-input-help {
         @apply opacity-100 transform translate-y-0;
@@ -200,6 +202,7 @@
       }
     }
   }
+  /*! purgecss end ignore */
 }
 
 .formulate-form-errors {
