@@ -1,16 +1,17 @@
 <template>
   <div v-if="!showQr" class="formulate-input" data-classification="button">
-  <button
-    type="button"
-    v-on:click="triggerSwish"
-  >
-    <slot></slot>
-  </button>
+    <button
+      type="button"
+      @click="triggerSwish"
+    >
+      <slot></slot>
+    </button>
   </div>
 
   <div v-else class="text-center">
-    <span>Skanna QR-kod för att ge med Swish</span>
-    <img :src="qr" alt="QR code" class="block mx-auto" />
+    <h3 class="font-sans mt-4 mb-2">Skanna QR-kod med Swish för att ge{{ amount ? ` ${amount} kr` : '' }}</h3>
+    <img :src="qr" alt="QR code" class="block mx-auto rounded-lg" />
+    <h3 class="font-sans my-2">Eller skriv in swishnumret: {{ swishNumber }}</h3>
   </div>
 </template>
 
@@ -27,7 +28,8 @@ export default {
   },
   data() {
     return {
-      showQr: false
+      showQr: false,
+      swishNumber: 1230961904,
     };
   },
   computed: {
@@ -45,7 +47,7 @@ export default {
       let payload = {
         version: 1,
         payee: {
-          value: "1230961904",
+          value: this.swishNumber,
           editable: false
         },
         message: {
