@@ -1,23 +1,32 @@
 <template>
   <transition name="slide-left-full">
     <aside class="fixed overflow-y-auto mx-auto inset-0 bg-cream" v-show="isOpen">
-      <div class="float-left m-2" @click="closeDrawer">
+      <div class="fixed float-left m-2 cursor-pointer" @click="closeDrawer">
         <svg width="100" height="100" viewBox="0 0 148 148" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M81.9303 46.0148L78.9056 43L50 72L78.9056 101L81.9303 97.9852L56.0298 72L81.9303 46.0148Z" fill="black"/>
         </svg>
       </div>
-      <div class="bg-primary-600 mx-auto my-8" style="height: 140px; width: 100px;"></div>
+
+      <div class="relative mx-auto my-8" style="height: 230px; width: 300px;">
+        <transition name="slide-left">
+          <nuxt-image v-show="formCategory !== 'matkasse'" src="/img/julklapp-opt.png" width="300" height="260" fit="contain" class="absolute inset-0 z-20 transition-all ease-in-out duration-200" :class="{ 'package-right': formCategory === 'julklapp' }" style="position: absolute; overflow: visible;"/>
+        </transition>
+        <transition name="slide-right">
+        <nuxt-image v-show="formCategory !== 'julklapp'" src="/img/matkasse-opt.png" width="300" height="260" fit="contain" class="absolute inset-0 z-10 transition-all ease-in-out duration-200" :class="{ 'package-left': formCategory === 'matkasse' }" style="position: absolute; overflow: visible;"/>
+        </transition>
+      </div>
+
       <h3 class="text-black text-5xl text-center mb-8">Ge en gåva</h3>
 
       <form name="gava" method="POST" data-netlify="true" @submit.prevent="submitHandler" class="flex flex-wrap mx-auto max-w-xs mb-16">
         <FormulateInput
           v-model="formCategory"
           type="radio"
-          :options="{matkasse: 'Matkasse', julklapp: 'Julklapp'}"
+          :options="{julklapp: 'Julklapp', matkasse: 'Matkasse'}"
           name="kategori"
           label="Vad vill du ge?"
-          placeholder="Välj matkasse eller julklapp"
-          validation="in:matkasse,julklapp"
+          placeholder="Välj julklapp eller matkasse"
+          validation="in:julklapp, matkasse"
           class="form-radio-choices"
         />
         <template v-if="formCategory !== ''">
@@ -61,7 +70,7 @@ export default {
     }
   },
   data: () => ({
-    isOpen: true,
+    isOpen: false,
     formCategory: '',
     formAmount: null,
     formMessage: '',
@@ -114,3 +123,14 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.package-left {
+  left: -50px;
+  right: 50px;
+}
+.package-right {
+  left: 50px;
+  right: -50px;
+}
+</style>

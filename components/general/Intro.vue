@@ -4,12 +4,19 @@
       En Jul För Alla
     </h1>
     <p class="subtitle">Ge en julklapp till ett barn som annars blir utan</p>
-    <button class="icon">Ge julklapp</button>
+    <button class="icon" type="button" @click="openDrawer">Ge julklapp</button>
   </header>
 </template>
 
 <script>
+import { EventBus } from '~/utils/EventBus.js';
+
 export default {
-  name: 'Header'
+  name: 'Header',
+  methods: {
+    openDrawer(evt) {
+      EventBus.$emit('isOpen', true);
+    },
+  },
 }
 </script>

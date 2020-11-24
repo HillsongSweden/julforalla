@@ -7,6 +7,7 @@
       & textarea,
       & input {
         @apply shadow-md border-accent-400;
+        box-shadow: 0 4px 6px -1px rgba(205, 110, 88, 0.5), 0 2px 4px -1px rgba(205, 110, 88, 0.2);
       }
     }
   }
@@ -20,7 +21,7 @@
     /* Global field-level wrapper styles */
     & textarea,
     & input {
-      @apply border-gray;
+      @apply border-gray py-4;
 
       &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
         @apply text-gray-600;
@@ -43,6 +44,7 @@
 
   & .formulate-input-errors {
     /* Global error message list wrapper */
+    @apply mt-2;
   }
 
   & .formulate-input-error,
@@ -181,7 +183,7 @@
       & .formulate-input-element {
         & textarea,
         & input {
-          @apply pt-6;
+          @apply pt-6 pb-2;
         }
       }
     }

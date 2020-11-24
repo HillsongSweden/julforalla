@@ -17,6 +17,7 @@
   "dependencies": {
     "@braid/vue-formulate": "^2.4.5",
     "@braid/vue-formulate-i18n": "^1.13.0",
+    "@nuxt/image": "0.0.4",
     "@nuxtjs/markdownit": "^1.2.6",
     "nuxt": "^2.14.6"
   },
