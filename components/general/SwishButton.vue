@@ -65,9 +65,9 @@ export default {
     }
   },
   methods: {
-    triggerSwish(event) {
+    async triggerSwish(event) {
       if (this.handler) {
-        this.handler(event);
+        await this.handler(event);
       }
 
       if (this.isMobile) {

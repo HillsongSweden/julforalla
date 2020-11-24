@@ -72,6 +72,19 @@ export default {
   methods: {
     submitHandler(evt) {
       console.log('Submitted!', evt);
+      // TODO: replace with supported request lib or polyfill fetch
+      return fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: this.encode({
+          "form-name": 'gava',
+          category: this.formCategory,
+          amount: this.formAmount,
+          message: this.formMessage,
+          email: this.formEmail,
+          gdpr: this.formGDPR,
+        })
+      })
     },
     openDrawer(evt) {
       this.isOpen = true;
@@ -80,6 +93,11 @@ export default {
     closeDrawer(evt) {
       this.isOpen = false;
       // EventBus.$emit('isOpen', this.isOpen);
+    },
+    encode(data) {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&")
     }
   },
 }
