@@ -6,13 +6,13 @@ import postcssPresetEnv from 'postcss-preset-env'
 import * as SITE_INFO from './assets/content/site/info.json'
 
 const dynamicContentPath = 'assets/content' // ? No prepending/appending backslashes here
-const dynamicRoutes = getDynamicPaths(
-  {
-    blog: 'blog/*.json',
-    projects: 'projects/*.json'
-  },
-  dynamicContentPath
-)
+// const dynamicRoutes = getDynamicPaths(
+//   {
+//     blog: 'blog/*.json',
+//     projects: 'projects/*.json'
+//   },
+//   dynamicContentPath
+// )
 
 export default {
   mode: 'universal',
@@ -45,11 +45,11 @@ export default {
       }
     ] // ? Imports the font 'Manrope' and is optimized by the netlify plugin 'Subfont'
   },
-  generate: {
-    routes: dynamicRoutes,
-    fallback: true,
-    subFolders: false
-  },
+  // generate: {
+  //   routes: dynamicRoutes,
+  //   fallback: true,
+  //   subFolders: false
+  // },
   /*
    ** Customize the progress-bar color
    */
