@@ -36,6 +36,7 @@
             type="submit"
             name="Swisha gåva"
           />
+          <swish-button :amount="formAmount">Swisha gåva</swish-button>
         </template>
       </form>
 
@@ -45,8 +46,12 @@
 
 <script>
 import { EventBus } from '~/utils/EventBus.js';
+import SwishButton from './SwishButton'
 
 export default {
+  components: {
+    'swish-button': SwishButton,
+  },
   data: () => ({
     isOpen: false,
     formCategory: 'matkasse',
