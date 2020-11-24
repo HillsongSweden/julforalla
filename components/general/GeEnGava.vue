@@ -32,11 +32,7 @@
 
           <FormulateInput v-model="formGDPR" type="checkbox" name="gdpr" label="Godkännande av hantering av personuppgifter. De uppgifter som du lämnar i detta formulär kommer hanteras konfidentiellt, och vi kommer inte lämna vidare dina uppgifter till någon utanför Hillsongs organisation." validation="required" />
 
-          <FormulateInput
-            type="submit"
-            name="Swisha gåva"
-          />
-          <swish-button :amount="formAmount">Swisha gåva</swish-button>
+          <swish-button :amount="formAmount" :handler="submitHandler">Swisha gåva</swish-button>
         </template>
       </form>
 

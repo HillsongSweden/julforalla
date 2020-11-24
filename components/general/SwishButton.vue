@@ -65,9 +65,9 @@ export default {
     }
   },
   methods: {
-    triggerSwish() {
+    triggerSwish(event) {
       if (this.handler) {
-        this.handler();
+        this.handler(event);
       }
 
       if (this.isMobile) {
