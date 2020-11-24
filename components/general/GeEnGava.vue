@@ -9,7 +9,7 @@
       <div class="bg-primary-600 mx-auto my-8" style="height: 140px; width: 100px;"></div>
       <h3 class="text-black text-5xl text-center mb-8">Ge en gåva</h3>
 
-      <form name="gava" method="POST" data-netlify="true" @submit="submitHandler" class="flex flex-wrap mx-auto max-w-xs mb-16">
+      <form name="gava" method="POST" data-netlify="true" @submit.prevent="submitHandler" class="flex flex-wrap mx-auto max-w-xs mb-16">
         <FormulateInput
           v-model="formCategory"
           type="radio"
@@ -21,17 +21,20 @@
           class="form-radio-choices"
         />
         <template v-if="formCategory !== ''">
-          <FormulateInput v-model="formAmount" type="number" name="belopp" placeholder="Hur mycket vill du ge?" help-position="before" help="Hur mycket vill du ge?" min="1" max="100000" validation="number|required" class="form-help-inside" />
+          <FormulateInput v-model="formAmount" type="number" name="belopp" placeholder="Hur mycket vill du ge?" help-position="before" help="Hur mycket vill du ge? (SEK)" min="1" max="100000" validation="number|required" class="form-help-inside" />
 
           <div class="formulate-input" style="margin-top: -1rem;">
             <div class="formulate-input-help formulate-input-help--after">{{ formAmountHelpText }}</div>
           </div>
 
-          <FormulateInput v-model="formMessage" type="textarea" name="meddelande" placeholder="Skriv en hälsning till en familj... (valfritt)" help-position="before" help="Din hälsning (valfritt)" class="form-help-inside"/>
+          <FormulateInput v-model="formMessage" v-if="formCategory === 'matkasse'" type="textarea" name="meddelande" placeholder="Skriv en hälsning till en familj som kommer få en av våra matkassar... (valfritt)" help-position="before" help="Din hälsning (valfritt)" class="form-help-inside"/>
 
-          <FormulateInput v-model="formEmail" type="email" name="email" placeholder="Email (valfritt)" help-position="before" help="Om du vill ha återkoppling när vi gett gåvorna så får du gärna fylla i din email." validation="email" />
+          <div class="formulate-input" style="margin-bottom: 0.5rem;">
+            <div class="formulate-input-label formulate-input-label--before">Om du vill ha återkoppling när vi gett gåvorna så får du gärna fylla i din email.</div>
+          </div>
+          <FormulateInput v-model="formEmail" type="email" name="email" placeholder="Email (valfritt)" help-position="before" help="Email (valfritt)" validation="email" class="form-help-inside"/>
 
-          <FormulateInput v-model="formGDPR" v-if="formEmail !== ''" type="checkbox" name="gdpr" label="Godkännande av hantering av personuppgifter. De uppgifter som du lämnar i detta formulär kommer hanteras konfidentiellt, och vi kommer inte lämna vidare dina uppgifter till någon utanför Hillsongs organisation." validation="accepted" />
+          <FormulateInput v-model="formGDPR" v-if="formEmail !== ''" type="checkbox" name="gdpr" label="Godkännande av hantering av personuppgifter. De uppgifter som du lämnar i detta formulär kommer hanteras konfidentiellt, och vi kommer inte lämna vidare dina uppgifter till någon utanför Hillsongs organisation." validation="accepted" class="form-label-disabled-empty" />
 
           <FormulateErrors />
           <swish-button :amount="formAmount" :handler="submitHandler">Swisha gåva</swish-button>
@@ -50,8 +53,15 @@ export default {
   components: {
     'swish-button': SwishButton,
   },
+  head() {
+    return {
+      bodyAttrs: {
+        class: this.isOpen ? 'overflow-hidden' : '',
+      }
+    }
+  },
   data: () => ({
-    isOpen: false,
+    isOpen: true,
     formCategory: '',
     formAmount: null,
     formMessage: '',

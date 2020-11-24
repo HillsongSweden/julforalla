@@ -1,6 +1,15 @@
 .formulate-input {
   /* global wrapper styles */
-  @apply font-sans flex-auto w-full mb-4;
+  @apply font-sans flex-auto w-full mb-5;
+
+  &[data-is-showing-errors="true"] {
+    & .formulate-input-element {
+      & textarea,
+      & input {
+        @apply shadow-md border-accent-400;
+      }
+    }
+  }
 
   & .formulate-input-label {
     /* global label styles */
@@ -9,6 +18,23 @@
 
   & .formulate-input-element {
     /* Global field-level wrapper styles */
+    & textarea,
+    & input {
+      @apply border-gray;
+
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        @apply text-gray-600;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        @apply text-gray-600;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        @apply text-gray-600;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        @apply text-gray-600;
+      }
+    }
   }
 
   & .formulate-input-help {
@@ -22,6 +48,7 @@
   & .formulate-input-error,
   & .formulate-file-upload-error {
     /* Error message styles */
+    @apply text-accent-600;
   }
 
   & .formulate-input-group-item {
@@ -39,7 +66,8 @@
 
   &[data-classification='textarea'] {
     & textarea {
-      /* Style textareas */
+      min-height: 8rem;
+      max-height: 24rem;
       &:focus {
         @apply border-accent-600;
       }
@@ -85,17 +113,88 @@
     }
   }
 
+  /* CUSTOM */
   &.form-radio-choices {
-    & [data-classification='box'] {
-      & .formulate-input-element {
-        /* WIP */
-
-        & input[type="radio"]:checked ~ .formulate-input-element-decorator {
-          @apply border-accent-600;
-          &::before {
-            @apply bg-accent-600;
+    &[data-classification='group'] {
+      & .formulate-input-group {
+        @apply flex;
+        /* & .formulate-input-group-item + .formulate-input-group-item {
+          @apply ml-2;
+        } */
+        & .formulate-input-group-item {
+          /* .formulate-input.form-radio-choices [data-classification="box"] .formulate-input-wrapper .formulate-input-element input[type="radio"] ~ .formulate-input-element-decorator */
+          &:first-child .formulate-input-wrapper .formulate-input-element input[type="radio"] ~ .formulate-input-element-decorator {
+            @apply rounded-tl rounded-bl;
+          }
+          &:last-child .formulate-input-wrapper .formulate-input-element input[type="radio"] ~ .formulate-input-element-decorator {
+            @apply rounded-tr rounded-br border-l-0;
           }
         }
+      }
+    }
+    & [data-classification='box'] {
+      & .formulate-input-wrapper {
+        @apply w-full relative;
+        & .formulate-input-element {
+          @apply w-full;
+
+          & input[type="radio"] ~ .formulate-input-element-decorator {
+            @apply w-full h-12 rounded-none border-gray;
+            &::before {
+              @apply rounded-none;
+              /* @apply w-full h-full top-0 left-0; */
+            }
+          }
+          & input[type="radio"]:checked ~ .formulate-input-element-decorator {
+            @apply border-accent border-2 border-l-2 !important;
+            &::before {
+              @apply bg-transparent;
+            }
+          }
+        }
+        & .formulate-input-label {
+          @apply relative right-0 m-0 text-accent;
+          left: -50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  /* CUSTOM */
+  &.form-help-inside {
+    @apply relative;
+    & .formulate-input-help {
+      @apply opacity-0 transition-all ease-in duration-150 transform translate-y-2 absolute top-0 m-2 pointer-events-none;
+    }
+    & .formulate-input-element {
+      @apply transition-all;
+      /* & input {
+        @apply transition-all;
+      } */
+    }
+
+    &[data-has-value="true"] {
+      & .formulate-input-help {
+        @apply opacity-100 transform translate-y-0;
+      }
+      & .formulate-input-element {
+        & textarea,
+        & input {
+          @apply pt-6;
+        }
+      }
+    }
+  }
+
+  /* CUSTOM */
+  &.form-label-disabled-empty {
+    & .formulate-input-label {
+      @apply text-gray;
+    }
+    &[data-has-value="true"] {
+      & .formulate-input-label {
+        @apply text-black;
       }
     }
   }
@@ -104,5 +203,6 @@
 .formulate-form-errors {
   & .formulate-form-error {
     /* form errors (not specific to a field) */
+    @apply text-accent-600;
   }
 }

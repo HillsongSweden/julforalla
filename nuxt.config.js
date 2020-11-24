@@ -105,8 +105,8 @@ export default {
   },
   purgeCSS: {
     mode: 'postcss',
-    whitelist: ['btn', 'icon', 'main'],
-    whitelistPatterns: [/^article/, /image$/]
+    whitelist: ['btn', 'icon', 'main', 'overflow-hidden'],
+    whitelistPatterns: [/^article/, /image$/, /^formulate/]
   },
   pwa: {
     icon: {
