@@ -72,20 +72,31 @@
       @apply flex-shrink-0 self-start my-1;
 
       & label {
-        /* @apply border-accent-600; */
-        /* &::before {
-          @apply border-accent-600;
-        } */
         &:focus {
           @apply border-accent-600;
         }
       }
-      /* & input {
+      & input[type="checkbox"]:checked ~ .formulate-input-element-decorator {
         @apply border-accent-600;
-        &:focus {
-          @apply border-accent-600;
+        &::before {
+          @apply bg-accent-600;
         }
-      } */
+      }
+    }
+  }
+
+  &.form-radio-choices {
+    & [data-classification='box'] {
+      & .formulate-input-element {
+        /* WIP */
+
+        & input[type="radio"]:checked ~ .formulate-input-element-decorator {
+          @apply border-accent-600;
+          &::before {
+            @apply bg-accent-600;
+          }
+        }
+      }
     }
   }
 }
