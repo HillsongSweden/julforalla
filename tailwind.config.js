@@ -45,8 +45,8 @@ module.exports = {
         },
         gray: {
           ...defaultTheme.colors.gray,
-          default: '#949494',
-          500: '#909090'
+          default: '#909090'
+          // 500: '#949494'
         }
       },
       opacity: {
