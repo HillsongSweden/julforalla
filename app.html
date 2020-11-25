@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html {{ HTML_ATTRS }}>
+
+<head {{ HEAD_ATTRS }}>
+    {{ HEAD }}
+</head>
+
+<body {{ BODY_ATTRS }}>
+    <form name="gava" method="post" netlify hidden>
+        <input type="hidden" name="form-name" value="gava" />
+        <input type="radio" id="formulate---1_julklapp" name="kategori" value="julklapp">
+        <input type="radio" id="formulate---1_matkasse" name="kategori" value="matkasse">
+        <input type="number" min="1" max="100000" id="formulate---4" name="belopp">
+        <textarea id="formulate---6" name="meddelande"></textarea>
+        <input type="email" id="formulate---5" name="email">
+        <input type="checkbox" id="formulate---7" name="gdpr" value="false">
+    </form>
+    {{ APP }}
+</body>
+
+</html>

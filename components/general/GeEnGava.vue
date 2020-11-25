@@ -18,6 +18,8 @@
     <h3 class="text-black text-5xl text-center mb-8">Ge en gåva</h3>
 
     <form name="gava" method="POST" data-netlify="true" @submit.prevent="submitHandler" class="flex flex-wrap mx-auto max-w-xs mb-16">
+      <input type="hidden" name="form-name" value="gava" />
+
       <FormulateInput
         v-model="formCategory"
         type="radio"
