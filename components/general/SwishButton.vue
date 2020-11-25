@@ -29,7 +29,7 @@ export default {
   data() {
     return {
       showQr: false,
-      swishNumber: 1230961904,
+      swishNumber: "1230961904",
     };
   },
   computed: {
