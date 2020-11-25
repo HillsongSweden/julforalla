@@ -34,39 +34,3 @@
   opacity: 0;
   transform: translate(0, 0);
 }
-
-slide-right-full .slide-right-full-enter-active,
-.slide-right-full-leave-active {
-  display: block;
-  transform: translateX(0%);
-  transition: all 0.25s ease;
-}
-
-.slide-right-full-leave-active {
-  transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
-}
-
-.slide-right-full-enter,
-.slide-right-full-leave-to {
-  display: block;
-  transform: translateX(100%);
-  opacity: 0;
-}
-
-.slide-left-full-enter-active,
-.slide-left-full-leave-active {
-  display: block;
-  transform: translateX(-100%);
-  transition: all 0.25s ease;
-}
-
-.slide-left-full-leave-active {
-  transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
-}
-
-.slide-left-full-enter,
-.slide-left-full-leave-to {
-  display: block;
-  transform: translateX(0%);
-  opacity: 0;
-}

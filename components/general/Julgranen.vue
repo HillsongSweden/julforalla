@@ -1,8 +1,8 @@
 <template>
   <div class="w-full my-16 max-w-md relative">
     <nuxt-image src="/img/julgran-bg-opt.png" class=""/>
-    <nuxt-image src="/img/julgran-klapp-opt.png" class="julklapp pulse" @click="openDrawer('julklapp')"/>
-    <nuxt-image src="/img/julgran-matkasse-opt.png" class="matkasse pulse" @click="openDrawer('matkasse')"/>
+    <nuxt-image v-intersect="isInView" src="/img/julgran-klapp-opt.png" class="julklapp" @click="openDrawer('julklapp')"/>
+    <nuxt-image v-intersect="isInView" src="/img/julgran-matkasse-opt.png" class="matkasse" @click="openDrawer('matkasse')"/>
   </div>
 </template>
 
@@ -13,6 +13,9 @@ export default {
   methods: {
     openDrawer(category) {
       EventBus.$emit('isOpen', category);
+    },
+    isInView(entry) {
+      if (entry && entry.target) entry.target.classList.add('tada');
     }
   },
 }
@@ -30,11 +33,11 @@ export default {
 
 .julklapp {
   @apply absolute left-0 bottom-0 overflow-visible !important;
-  animation-delay: 4s;
+  animation-delay: 1.5s;
 }
 .matkasse {
   @apply absolute right-0 bottom-0 overflow-visible !important;
-  animation-delay: 8s;
+  animation-delay: 2s;
 }
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
@@ -45,6 +48,34 @@ export default {
 }
 .pulse {
   animation-name: pulse;
+  animation-duration: .75s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+.tada {
+  animation-name: tada;
   animation-duration: .75s;
   animation-timing-function: ease-in-out;
 }

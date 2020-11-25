@@ -15,6 +15,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@arnellebalane/vue-intersect": "^2.0.0",
     "@braid/vue-formulate": "^2.4.5",
     "@braid/vue-formulate-i18n": "^1.13.0",
     "@nuxt/image": "0.0.4",

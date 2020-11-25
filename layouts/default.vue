@@ -1,8 +1,10 @@
 <template>
   <div>
     <Intro />
-    <nuxt />
-    <GeEnGava />
+    <div class="container">
+      <nuxt />
+      <GeEnGava />
+    </div>
   </div>
 </template>
 

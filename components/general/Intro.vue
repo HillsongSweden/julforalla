@@ -4,33 +4,32 @@
       class="sticky-header fixed w-full p-5 flex justify-between items-center bg-cream z-0"
       :class="{ active: isActive }"
     >
-      <img class="julforalla max-width-" src="/ogp.png" alt="En jul för alla" width="200" />
+      <nuxt-image class="julforalla max-w-xs" src="/ogp.png" alt="En jul för alla" width="200" />
       <div>
         <button class="bg-accent text-white rounded p-3 px-5" @click="openDrawer" ref="callToAction">Ge en gåva</button>
       </div>
     </div>
-    <div class="flex -m-4">
+    <div class="flex">
       <div class="bg-mistletoe bg-contain bg-no-repeat flex-1"></div>
       <div class="flex-1 flex items-center justify-center logo-container">
-        <img class="hillsong-logo" src="/img/hillsong-logo.png" alt="Hillsong Logotype" />
+        <nuxt-image class="hillsong-logo" src="/img/hillsong-logo.png" alt="Hillsong Logotype" />
       </div>
       <div class="bg-mistletoe bg-contain bg-no-repeat flex-1"></div>
     </div>
-    <img src="/ogp.png" alt="En jul för alla" />
 
-    <article class="px-6 text-lg leading-6">
+    <article class="max-w-xl mx-auto px-6 text-lg leading-6">
+      <nuxt-image src="/ogp.png" alt="En jul för alla" />
       <p>
-        Vår dröm är att alla ska få en minnesvärd jul. Runt om i Sverige finns det många familjer som inte får ihop det,
-        och när man vanligtvis inte har råd att betala sina räkningar blir julen och helgerna en utmanande påfrestning.
+        Julen är en tid som ska vara full av ljus och glädje, men så är det tyvärr inte för alla.
+        Många familjer runt om i Sverige kämpar i vardagen med att få ihop till räkningar och annat och julen kan då bli en extra påfrestning. Där har den senaste säsongen med Covid-19 skapat en ännu större utmaning för en del. Därför är vi glada för att vi tillsammans kan få ge av det vi har för att sprida ljus och hopp till människor i jul.
       </p>
-      <p>Tillsammans kan vi göra en skillnad och sprida både hopp och glädje till fler.</p>
     </article>
 
     <div class="mt-6 text-center text-lg">
       <button class="bg-accent text-white rounded p-5 px-10" @click="openDrawer" ref="callToAction">Ge en gåva</button>
     </div>
     <div class="flex justify-center mt-5">
-      <img src="/img/single-branch.png" alt="Single mistle branch" role="presentational" width="75" />
+      <nuxt-image src="/img/single-branch.png" alt="Single mistle branch" role="presentational" width="96" class="w-24" />
     </div>
   </header>
 </template>
@@ -67,6 +66,7 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+/*! purgecss start ignore */
 .bg-mistletoe {
   height: 150px;
   background-position-x: -10px;
@@ -88,4 +88,5 @@ export default {
 .sticky-header.active {
   transform: translateY(0%);
 }
+/*! purgecss end ignore */
 </style>
