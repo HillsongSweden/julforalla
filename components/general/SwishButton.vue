@@ -41,7 +41,7 @@ export default {
       return isAndroid || isIOS;
     },
     qr() {
-      return `https://d2s0kcwikgf0tm.cloudfront.net/?amount=${this.amount}`;
+      return `https://d13tbc26tnbn9m.cloudfront.net/?amount=${this.amount}`;
     },
     href() {
       let payload = {
