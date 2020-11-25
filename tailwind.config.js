@@ -54,6 +54,9 @@ module.exports = {
         '20': '0.2'
       }
     },
+    backgroundImage: theme => ({
+      'mistletoe': "url('/img/mistletoe.png')"
+    }),
     boxShadow: {
       ...defaultTheme.boxShadow,
       outline: '0 0 0 3px rgba(0, 86, 87,0.5)'
