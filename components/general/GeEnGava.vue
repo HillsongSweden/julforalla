@@ -87,6 +87,7 @@ export default {
   mounted() {
     EventBus.$on('isOpen', (payload) => {
       if (payload === true) this.openDrawer();
+      else if (typeof payload === 'string') this.openDrawer(payload);
       else this.closeDrawer();
     })
   },
@@ -107,13 +108,14 @@ export default {
         })
       })
     },
-    openDrawer(evt) {
+    openDrawer(prefillCategory) {
       this.isOpen = true;
-      // EventBus.$emit('isOpen', this.isOpen);
+      if (prefillCategory === 'matkasse' || prefillCategory === 'julklapp') {
+        this.formCategory = prefillCategory;
+      }
     },
-    closeDrawer(evt) {
+    closeDrawer() {
       this.isOpen = false;
-      // EventBus.$emit('isOpen', this.isOpen);
     },
     encode(data) {
       return Object.keys(data)
