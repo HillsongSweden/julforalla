@@ -15,7 +15,7 @@ export default {
       EventBus.$emit('isOpen', category);
     },
     isInView(entry) {
-      if (entry && entry.target) entry.target.classList.add('tada');
+      if (entry && entry.target) entry.target.classList.add('tada-delayed');
     }
   },
 }
@@ -51,7 +51,7 @@ export default {
   animation-duration: .75s;
   animation-timing-function: ease-in-out;
 }
-@keyframes tada {
+/* @keyframes tada {
   from {
     transform: scale3d(1, 1, 1);
   }
@@ -73,11 +73,41 @@ export default {
   to {
     transform: scale3d(1, 1, 1);
   }
+} */
+@keyframes tadaDelayed {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  1%,
+  2% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  3%,
+  5%,
+  7%,
+  9% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  4%,
+  6%,
+  8% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  10%,
+  to {
+    transform: scale3d(1, 1, 1);
+  }
 }
-.tada {
+/* .tada {
   animation-name: tada;
   animation-duration: .75s;
   animation-timing-function: ease-in-out;
+} */
+.tada-delayed {
+  animation-name: tadaDelayed;
+  animation-duration: 7.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 5;
 }
 /*! purgecss end ignore */
 </style>

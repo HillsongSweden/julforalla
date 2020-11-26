@@ -11,7 +11,7 @@
   <div v-else class="text-center">
     <h3 class="font-sans mt-4 mb-2">Skanna QR-kod med Swish för att ge{{ amount ? ` ${amount} kr` : '' }}</h3>
     <img :src="qr" alt="QR code" class="block mx-auto rounded-lg" />
-    <h3 class="font-sans my-2">Eller skriv in swishnumret: {{ swishNumber }}</h3>
+    <h3 class="font-sans my-2">Eller skriv in swishnumret: {{ swishNumber.label }}</h3>
   </div>
 </template>
 
@@ -29,7 +29,10 @@ export default {
   data() {
     return {
       showQr: false,
-      swishNumber: "1230961904",
+      swishNumber: {
+        slug: "1230961904",
+        label: "123-096 19 04",
+      }
     };
   },
   computed: {
@@ -47,7 +50,7 @@ export default {
       let payload = {
         version: 1,
         payee: {
-          value: this.swishNumber,
+          value: this.swishNumber.slug,
           editable: false
         },
         message: {
