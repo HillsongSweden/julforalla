@@ -1,6 +1,6 @@
 <template>
   <header class="main flex flex-col justify-center">
-    <div class="sticky-header fixed top-0 left-0 w-full p-8 bg-cream z-20" :class="{ active: isActive }">
+    <div class="sticky-header fixed top-0 left-0 w-full p-8 bg-cream z-20 shadow-sm" :class="{ active: isActive }">
       <div class="max-w-5xl mx-auto flex justify-between">
         <nuxt-image class="julforalla" src="/ogp.png" alt="En jul för alla" />
 
@@ -24,7 +24,7 @@
     </div>
     <div class="flex justify-center mt-5">
       <nuxt-image
-        src="/img/single-branch.png"
+        src="/img/single-branch-opt.png"
         alt="Single mistle branch"
         role="presentational"
         width="96"

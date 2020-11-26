@@ -55,7 +55,7 @@ module.exports = {
       }
     },
     backgroundImage: theme => ({
-      'mistletoe': "url('/img/mistletoe.png')"
+      mistletoe: "url('/img/mistletoe-opt.png')"
     }),
     boxShadow: {
       ...defaultTheme.boxShadow,
