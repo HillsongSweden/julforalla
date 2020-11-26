@@ -17,7 +17,7 @@
 
     <h3 class="text-black text-5xl text-center mb-8">Ge en gåva</h3>
 
-    <form name="gava" method="POST" data-netlify="true" @submit.prevent="submitHandler" class="flex flex-wrap mx-auto max-w-xs mb-16">
+    <FormulateForm ref="form" name="gava" method="POST" data-netlify="true" @submit="submitHandler" @input="checkForErrors" class="flex flex-wrap mx-auto max-w-xs mb-32">
       <input type="hidden" name="form-name" value="gava" />
 
       <FormulateInput
@@ -37,19 +37,19 @@
           <div class="formulate-input-help formulate-input-help--after">{{ formAmountHelpText }}</div>
         </div>
 
-        <FormulateInput v-model="formMessage" v-if="formCategory === 'matkasse'" type="textarea" name="meddelande" placeholder="Skriv en hälsning till en familj som kommer få en av våra matkassar... (valfritt)" help-position="before" help="Din hälsning (valfritt)" class="form-help-inside"/>
+        <FormulateInput v-model="formMessage" v-if="formCategory === 'matkasse'" type="textarea" name="meddelande" placeholder="Skriv en hälsning till en familj som kommer få en av våra matkassar... (valfritt)" help-position="before" help="Din hälsning (valfritt)" validation="optional" class="form-help-inside"/>
 
         <div class="formulate-input" style="margin-bottom: 0.5rem;">
           <div class="formulate-input-label formulate-input-label--before">Om du vill ha återkoppling när vi gett gåvorna så får du gärna fylla i din email.</div>
         </div>
-        <FormulateInput v-model="formEmail" type="email" name="email" placeholder="Email (valfritt)" help-position="before" help="Email (valfritt)" validation="email" class="form-help-inside"/>
+        <FormulateInput v-model="formEmail" type="email" name="email" placeholder="Email (valfritt)" help-position="before" help="Email (valfritt)" validation="optional|email" class="form-help-inside"/>
 
         <FormulateInput v-model="formGDPR" v-if="formEmail !== ''" type="checkbox" name="gdpr" label="Godkännande av hantering av personuppgifter. De uppgifter som du lämnar i detta formulär kommer hanteras konfidentiellt, och vi kommer inte lämna vidare dina uppgifter till någon utanför Hillsongs organisation." validation="accepted" class="form-label-disabled-empty" />
 
         <FormulateErrors />
-        <swish-button :amount="formAmount" :handler="submitHandler">Swisha gåva</swish-button>
+        <swish-button ref="swishBtn" :amount="formAmount" :disabled="hasErrors"/>
       </template>
-    </form>
+    </FormulateForm>
 
   </aside>
 </template>
@@ -70,6 +70,7 @@ export default {
     }
   },
   data: () => ({
+    hasErrors: true,
     isOpen: false,
     formCategory: '',
     formAmount: null,
@@ -92,10 +93,13 @@ export default {
     })
   },
   methods: {
-    submitHandler(evt) {
+    async checkForErrors () {
+      if (this.$refs && this.$refs.form) this.hasErrors = await this.$refs.form.hasValidationErrors();
+    },
+    async submitHandler(evt) {
       console.log('Submitted!', evt);
       // TODO: replace with supported request lib or polyfill fetch
-      return fetch("/", {
+      await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: this.encode({
@@ -106,7 +110,9 @@ export default {
           email: this.formEmail,
           gdpr: this.formGDPR,
         })
-      })
+      });
+
+      if (this.$refs && this.$refs.swishBtn) this.$refs.swishBtn.triggerSwish(evt);
     },
     openDrawer(prefillCategory) {
       this.isOpen = true;

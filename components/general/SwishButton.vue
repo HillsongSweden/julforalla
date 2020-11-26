@@ -1,11 +1,11 @@
 <template>
   <div v-if="!showQr" class="formulate-input" data-classification="button">
-    <button
-      type="button"
-      @click="triggerSwish"
-    >
-      <slot></slot>
-    </button>
+    <FormulateInput
+      type="submit"
+      name="Swisha gåva"
+      :disabled="disabled"
+    />
+      <!-- @click="triggerSwish" -->
   </div>
 
   <div v-else class="text-center">
@@ -19,8 +19,8 @@
 export default {
   name: "SwishButton",
   props: {
+    disabled: Boolean,
     amount: String,
-
     /**
      * Optional handler to call before triggering Swish App/QR
      */

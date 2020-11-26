@@ -23,18 +23,10 @@
     & input {
       @apply font-sans border-gray py-4;
 
-      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-        @apply font-sans text-gray-700;
-      }
-      &::-moz-placeholder { /* Firefox 19+ */
-        @apply font-sans text-gray-700;
-      }
-      &:-ms-input-placeholder { /* IE 10+ */
-        @apply font-sans text-gray-700;
-      }
-      &:-moz-placeholder { /* Firefox 18- */
-        @apply font-sans text-gray-700;
-      }
+      &::-webkit-input-placeholder { @apply font-sans text-gray-700; }
+      &::-moz-placeholder { @apply font-sans text-gray-700; }
+      &:-ms-input-placeholder { @apply font-sans text-gray-700; }
+      &:-moz-placeholder { @apply font-sans text-gray-700; }
     }
   }
 
@@ -83,6 +75,12 @@
       &:hover {
         @apply bg-accent-600;
       }
+      &[disabled] {
+        @apply bg-gray border-gray text-white;
+        &:hover {
+          @apply bg-gray cursor-not-allowed;
+        }
+      }
     }
   }
 
@@ -125,11 +123,7 @@
     &[data-classification='group'] {
       & .formulate-input-group {
         @apply flex;
-        /* & .formulate-input-group-item + .formulate-input-group-item {
-          @apply ml-2;
-        } */
         & .formulate-input-group-item {
-          /* .formulate-input.form-radio-choices [data-classification="box"] .formulate-input-wrapper .formulate-input-element input[type="radio"] ~ .formulate-input-element-decorator */
           &:first-child .formulate-input-wrapper .formulate-input-element input[type="radio"] ~ .formulate-input-element-decorator {
             @apply rounded-tl rounded-bl;
           }
@@ -146,10 +140,9 @@
           @apply w-full;
 
           & input[type="radio"] ~ .formulate-input-element-decorator {
-            @apply w-full h-12 rounded-none border-gray;
+            @apply w-full h-12 rounded-none border-gray cursor-pointer;
             &::before {
               @apply rounded-none;
-              /* @apply w-full h-full top-0 left-0; */
             }
           }
           & input[type="radio"]:checked ~ .formulate-input-element-decorator {
@@ -160,7 +153,7 @@
           }
         }
         & .formulate-input-label {
-          @apply relative right-0 m-0 text-gray;
+          @apply relative right-0 m-0 text-gray cursor-pointer;
           left: -50%;
           transform: translateX(-50%);
         }
@@ -197,6 +190,11 @@
         & textarea,
         & input {
           @apply pt-6 pb-2;
+
+          &::-webkit-input-placeholder { @apply text-transparent; }
+          &::-moz-placeholder { @apply text-transparent; }
+          &:-ms-input-placeholder { @apply text-transparent; }
+          &:-moz-placeholder { @apply text-transparent; }
         }
       }
     }
