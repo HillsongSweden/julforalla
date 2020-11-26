@@ -98,9 +98,9 @@ export default {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: this.encode({
           "form-name": 'gava',
-          category: this.formCategory,
-          amount: this.formAmount,
-          message: this.formMessage,
+          kategori: this.formCategory,
+          belopp: this.formAmount,
+          meddelande: this.formMessage,
           email: this.formEmail,
           gdpr: this.formGDPR,
         })
