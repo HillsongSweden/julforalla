@@ -14,6 +14,11 @@ module.exports = {
         sans: ['Roboto', ...defaultTheme.fontFamily.sans],
         mono: [...defaultTheme.fontFamily.mono]
       },
+      screens: {
+        ...defaultTheme.screens,
+        sm: '480px',
+        md: '680px'
+      },
       colors: {
         primary: {
           50: '#FDFEFE',

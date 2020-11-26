@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full my-16 max-w-md relative">
+  <div class="w-full my-4 max-w-md relative">
     <nuxt-image src="/img/julgran-bg-opt.png" class=""/>
     <nuxt-image v-intersect="isInView" src="/img/julgran-klapp-opt.png" class="julklapp" @click="openDrawer('julklapp')"/>
     <nuxt-image v-intersect="isInView" src="/img/julgran-matkasse-opt.png" class="matkasse" @click="openDrawer('matkasse')"/>
