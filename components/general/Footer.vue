@@ -1,5 +1,5 @@
 <template>
-  <footer class="flex justify-between w-full py-8 px-6 mt-8">
+  <footer class="flex justify-between w-full max-w-6xl mx-auto py-8 px-6 mt-8">
     <div class="">
       <h5>Contact</h5>
       <a href="mailto:citycare@hillsong.se" class="text-black block my-2">citycare@hillsong.se</a>

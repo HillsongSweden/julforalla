@@ -4,6 +4,7 @@ import postcssImport from 'postcss-import'
 import postcssNesting from 'postcss-nesting'
 import postcssPresetEnv from 'postcss-preset-env'
 import * as SITE_INFO from './assets/content/site/info.json'
+import * as SITE_COUNTERS from './assets/content/site/counters.json'
 
 const dynamicContentPath = 'assets/content' // ? No prepending/appending backslashes here
 // const dynamicRoutes = getDynamicPaths(
@@ -22,12 +23,14 @@ export default {
       process.env.NODE_ENV === 'production'
         ? process.env.URL || 'http://createADotEnvFileAndSetURL'
         : 'http://localhost:3000',
-    lang: SITE_INFO.sitelang || 'sv-SE'
+    lang: SITE_INFO.sitelang || 'sv-SE',
+    counters: SITE_COUNTERS,
   },
   /*
    ** Headers of the page
    */
   head: {
+    htmlAttrs: { lang: SITE_INFO.sitelang || 'sv-SE' },
     title: SITE_INFO.sitename || process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
@@ -46,7 +49,7 @@ export default {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Viaoda+Libre&display=swap'
       }
-    ] // ? Imports the font 'Manrope' and is optimized by the netlify plugin 'Subfont'
+    ]
   },
   // generate: {
   //   routes: dynamicRoutes,
