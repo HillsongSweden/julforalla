@@ -1,6 +1,6 @@
 {
   "name": "julforalla",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Site for hsong campaign",
   "author": "Sven Parker <sven@svenparker.com> (https://svenparker.com)",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/knogobert/julforalla#readme"
+    "url": "https://github.com/HillsongSweden/julforalla#readme"
   },
   "license": "MIT",
   "dependencies": {

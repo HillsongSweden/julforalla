@@ -3,6 +3,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4fea5f99-a287-451a-b96f-408fb922d8e6/deploy-status)](https://app.netlify.com/sites/julforalla/deploys)
 
+**[Live Site](https://enjulföralla.se/)**
 **[Live Demo](https://julforalla.netlify.app/)**
 
 ## 🔋 Batteries included
