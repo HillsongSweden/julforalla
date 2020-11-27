@@ -12,10 +12,9 @@
 
     <article class="mx-auto text-lg leading-6">
       <p>
-        Julen är en tid som ska vara full av ljus och glädje, men så är det tyvärr inte för alla. Många familjer runt om
-        i Sverige kämpar i vardagen med att få ihop till räkningar och annat och julen kan då bli en extra påfrestning.
-        Där har den senaste säsongen med Covid-19 skapat en ännu större utmaning för en del. Därför är vi glada för att
-        vi tillsammans kan få ge av det vi har för att sprida ljus och hopp till människor i jul.
+        Julen är en tid som ska vara full av ljus och glädje, men så är det tyvärr inte för alla.
+        Många familjer runt om i Sverige kämpar i vardagen med att få ihop nog för att betala räkningar.
+        Då kan julen lätt kännas som en extra påfrestning. Där har den senaste säsongen med covid-19 skapat ännu större utmaningar för en del. Därför är vi glada för att vi tillsammans kan få ge av det vi har för att sprida ljus och hopp till människor.
       </p>
     </article>
 
