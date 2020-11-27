@@ -1,6 +1,9 @@
 <template>
   <header class="main flex flex-col justify-center">
-    <div class="sticky-header fixed top-0 left-0 w-full p-8 bg-cream z-20 shadow-sm" :class="{ active: isActive }">
+    <div
+      class="sticky-header fixed top-0 left-0 w-full py-5 px-10 bg-cream z-20 shadow-sm"
+      :class="{ active: isActive }"
+    >
       <div class="max-w-5xl mx-auto flex justify-between">
         <nuxt-image class="julforalla" src="/ogp.png" alt="En jul för alla" />
 
@@ -10,11 +13,12 @@
 
     <nuxt-image src="/ogp.png" alt="En jul för alla" class="julforalla" />
 
-    <article class="mx-auto text-lg leading-6">
+    <article class="mx-auto">
       <p>
-        Julen är en tid som ska vara full av ljus och glädje, men så är det tyvärr inte för alla.
-        Många familjer runt om i Sverige kämpar i vardagen med att få ihop nog för att betala räkningar.
-        Då kan julen lätt kännas som en extra påfrestning. Där har den senaste säsongen med covid-19 skapat ännu större utmaningar för en del. Därför är vi glada för att vi tillsammans kan få ge av det vi har för att sprida ljus och hopp till människor.
+        Julen är en tid som ska vara full av ljus och glädje, men så är det tyvärr inte för alla. Många familjer runt om
+        i Sverige kämpar i vardagen med att få ihop nog för att betala räkningar. Då kan julen lätt kännas som en extra
+        påfrestning. Där har den senaste säsongen med covid-19 skapat ännu större utmaningar för en del. Därför är vi
+        glada för att vi tillsammans kan få ge av det vi har för att sprida ljus och hopp till människor.
       </p>
     </article>
 
