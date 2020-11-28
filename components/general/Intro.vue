@@ -25,15 +25,6 @@
     <div class="mt-6 text-center text-lg">
       <button class="bg-accent text-white rounded p-5 px-10" @click="openDrawer" ref="callToAction">Ge en gåva</button>
     </div>
-    <div class="flex justify-center mt-5">
-      <nuxt-image
-        src="/img/single-branch-opt.png"
-        alt="Single mistle branch"
-        role="presentational"
-        width="96"
-        class="w-24"
-      />
-    </div>
   </header>
 </template>
 
