@@ -32,9 +32,10 @@
         placeholder="Välj julklapp eller matkasse"
         validation="required"
         class="form-radio-choices"
+        :validation-messages="{ required: 'Välj vilken typ av gåva' }"
       />
       <template v-if="formCategory !== ''">
-        <FormulateInput v-model="formAmount" type="number" name="belopp" placeholder="Hur mycket vill du ge? (SEK)" help-position="before" help="Hur mycket vill du ge? (SEK)" min="1" max="100000" validation="number|required" class="form-help-inside" />
+        <FormulateInput v-model="formAmount" type="number" name="belopp" placeholder="Hur mycket vill du ge? (SEK)" help-position="before" help="Hur mycket vill du ge? (SEK)" min="1" max="100000" validation="number|required" class="form-help-inside" :validation-messages="{ number: 'Vänligen fyll i belopp', required: 'Vänligen fyll i belopp' }"/>
 
         <div class="formulate-input" style="margin-top: -1rem;">
           <div class="formulate-input-help formulate-input-help--after">{{ formAmountHelpText }}</div>
@@ -45,7 +46,7 @@
         <div class="formulate-input" style="margin-bottom: 0.5rem;">
           <div class="formulate-input-label formulate-input-label--before">Om du vill ha återkoppling när vi gett gåvorna så får du gärna fylla i din email.</div>
         </div>
-        <FormulateInput v-model="formEmail" type="email" name="email" placeholder="Email (valfritt)" help-position="before" help="Email (valfritt)" validation="optional|email" class="form-help-inside"/>
+        <FormulateInput v-model="formEmail" type="email" name="email" placeholder="Email (valfritt)" help-position="before" help="Email (valfritt)" validation="optional|email" class="form-help-inside" :validation-messages="{ email: ({ value }) => `“${value}” är inte en giltig e-postadress` }" />
 
         <FormulateInput v-model="formGDPR" v-if="formEmail !== ''" type="checkbox" name="gdpr" label="Godkännande av hantering av personuppgifter. De uppgifter som du lämnar i detta formulär kommer hanteras konfidentiellt, och vi kommer inte lämna vidare dina uppgifter till någon utanför Hillsongs organisation." validation="accepted" class="form-label-disabled-empty" />
 
