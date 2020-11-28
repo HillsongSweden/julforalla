@@ -50,6 +50,18 @@
     /* Group of items (like list of checkboxes) wrapper */
   }
 
+  &[data-type='number'] {
+    & input {
+      -moz-appearance: textfield;
+      /* Chrome, Safari, Edge, Opera */
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+
   &[data-classification='text'] {
     & input {
       /* Style all text-like input elements */
@@ -63,6 +75,7 @@
     & textarea {
       min-height: 8rem;
       max-height: 24rem;
+      resize: none;
       &:focus {
         @apply border-accent-600;
       }
@@ -172,7 +185,7 @@
   &.form-help-inside {
     @apply relative;
     & .formulate-input-help {
-      @apply opacity-0 transition ease-in duration-150 transform translate-y-2 absolute top-0 mt-1 ml-3 pointer-events-none;
+      @apply opacity-0 transition ease-in duration-150 transform translate-y-2 absolute top-0 mt-1 ml-3 pointer-events-none text-xs leading-6;
     }
     & .formulate-input-element {
       @apply transition;
