@@ -59,6 +59,9 @@ module.exports = {
         '20': '0.2'
       }
     },
+    rotate: {
+      '-18': '-18deg'
+    },
     backgroundImage: theme => ({
       mistletoe: "url('/img/mistletoe-opt.png')"
     }),
