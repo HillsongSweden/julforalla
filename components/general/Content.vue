@@ -79,7 +79,7 @@
       finns i samhället, som till exempel ekonomisk utsatthet och utanförskap.
     </p>
 
-    <nuxt-image src="/img/rosett.png" class="h-64 rosett" role="presentational" />
+    <nuxt-image src="/img/rosett.png" class="h-40 rosett" role="presentational" />
 
     <p>RÄDDNINGSMISSIONEN - GÖTEBORG</p>
     <p>
