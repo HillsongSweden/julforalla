@@ -14,7 +14,7 @@
 
     <nuxt-image src="/img/merry-xmas.jpg" class="-mx-10 mt-10" />
     <div class="flex justify-end -mx-10">
-      <nuxt-image src="/img/single-branch-opt.png" class="w-24 transform -translate-y-6 translate-x-5 -rotate-18" />
+      <nuxt-image src="/img/single-branch-opt.png" class="w-24 transform -translate-y-6 -rotate-18" />
     </div>
 
     <h2>Ökat behov på grund av Corona</h2>

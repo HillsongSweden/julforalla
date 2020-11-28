@@ -1,7 +1,7 @@
 <template>
   <header class="main flex flex-col justify-center">
     <div
-      class="sticky-header fixed top-0 left-0 w-full py-5 px-10 bg-cream z-20 shadow-sm"
+      class="sticky-header fixed top-0 left-0 w-full py-5 px-5 bg-cream z-20 shadow-sm"
       :class="{ active: isActive }"
     >
       <div class="max-w-5xl mx-auto flex justify-between">
