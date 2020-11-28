@@ -42,6 +42,11 @@ export default {
         hid: 'description',
         name: 'description',
         content: SITE_INFO.sitedescription || process.env.npm_package_description || ''
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: SITE_INFO['og:description'] || ''
       }
     ],
     link: [
