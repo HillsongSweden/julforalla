@@ -51,16 +51,30 @@
     </p>
 
     <p>FRÄLSNINGSARMÉN - STOCKHOLM</p>
-    <p>...</p>
+    <p>
+      Frälsningsarmén är en kristen kyrka med ett stort socialt engagemang. För dem är omsorgen om hela människan en
+      central del i deras tro och verksamhet. Vi har sedan flera år samarbetat med Söderkåren på Södermalm som möter
+      många människor med stora behov, däribland familjer i ekonomisk utsatthet.
+    </p>
+
+    <p>
+      Kvinnocentret i Akalla är en av Frälsningsarméns lokala kårer i Stockholm. Deras mål är att utifrån deras kristna
+      tro möta människor i kris och vara en del av deras helande och upprättelse. De arbetar för att bryta isolering och
+      utanförskap samt att stötta kvinnor på väg till arbetsliv och att bli en del av det svenska samhället.
+    </p>
 
     <p>STADSMISSIONEN - STOCKHOLM</p>
-    <p>...</p>
+    <p>
+      Stockholms Stadsmission är en idéburen organisation som utifrån en kristen grundsyn arbetar för att skapa ett
+      mänskligare samhälle för alla. Detta gör de genom att arbeta med social omsorg, utbildning och arbetsintegration.
+    </p>
 
     <p>SVENSKA KYRKAN - MÄRSTA</p>
-    <p>...</p>
-
-    <p>ALSIKE KLOSTER - STOCKHOLM</p>
-    <p>...</p>
+    <p>
+      Svenska kyrkan, Märsta pastorat vill ge alla människor plats. Alla människor är välkomna, troende eller ej. Deras
+      fokus ligger på att Gud älskar människan, inte att människan måste älska Gud. De möter regelbundet de behov som
+      finns i samhället, som till exempel ekonomisk utsatthet och utanförskap.
+    </p>
 
     <p>RÄDDNINGSMISSIONEN - GÖTEBORG</p>
     <p>
@@ -74,11 +88,11 @@
       och annat.
     </p>
 
-    <p>FRÄLSNINGSARMEN - JÖNKÖPING</p>
-    <p>...</p>
-
     <p>FRÄLSNINGSARMÉN - ÖREBRO</p>
-    <p>...</p>
+    <p>
+      Frälsningsarmén i Örebro har stort nätverk och jobbar året runt med sociala insatser i staden. Tillsammans med dem
+      når vi ut till närmare 80 hushåll med matkassar och julklappar.
+    </p>
   </section>
 </template>
 
