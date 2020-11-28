@@ -9,7 +9,7 @@
       </svg>
     </div>
 
-    <div class="relative mx-auto my-8" style="height: 165px; width: 215px;">
+    <div class="relative mx-auto mt-8" style="height: 106px; width: 139px">
       <transition name="slide-left">
         <nuxt-image v-show="formCategory !== 'matkasse'" src="/img/julklapp-opt.png" width="300" height="260" fit="contain" class="absolute inset-0 z-20 transition ease-in-out duration-200 pointer-events-none" :class="{ 'package-right': formCategory === 'julklapp' }" style="position: absolute; overflow: visible;"/>
       </transition>
@@ -18,7 +18,7 @@
       </transition>
     </div>
 
-    <h3 class="text-black text-5xl text-center mb-8">Ge en gåva</h3>
+    <h2 class="text-center mt-2">Ge en gåva</h2>
 
     <FormulateForm ref="form" name="gava" method="POST" data-netlify="true" @submit="submitHandler" @input="checkForErrors" class="flex flex-wrap mx-auto max-w-xs mb-32">
       <input type="hidden" name="form-name" value="gava" />
