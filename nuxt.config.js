@@ -52,11 +52,6 @@ export default {
         hid: 'og:image',
         name: 'og:image',
         content: '/og-image.png'
-      },
-      {
-        hid: 'twitter:image',
-        name: 'twitter:image',
-        content: '/og-image.png'
       }
     ],
     link: [
