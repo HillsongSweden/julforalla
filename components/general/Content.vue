@@ -12,7 +12,7 @@
       där vi finns. Vi kommer att distribuera julgåvor i Göteborg, Jönköping, Stockholm och Örebro veckorna innan jul.  
     </p>
 
-    <nuxt-image src="/img/merry-xmas-opt.jpg" class="-mx-5 mt-10 max-h-48" />
+    <nuxt-image src="/img/merry-xmas-opt.jpg" class="mt-10 max-h-48" />
 
     <div>
       <nuxt-image src="/img/single-branch-opt.png" class="w-20 -rotate-18 float-right transform translate-x-8" />
@@ -32,7 +32,7 @@
       familjers ekonomiska utmaningar.
     </p>
 
-    <nuxt-image src="/img/apartments-opt.jpg" class="-mx-10 mt-10" />
+    <nuxt-image src="/img/apartments-opt.jpg" class="mt-10" />
 
     <h2>Organisationer vi samarbetar med under årets julinsamling</h2>
     <p>
@@ -42,9 +42,9 @@
       få vara med och hjälpa. Nedan följer information om organisationerna.
     </p>
 
-    <div class="flex">
-      <XmasEntity src="/img/julgran-klapp-opt.png" type="julklapp" />
-      <XmasEntity src="/img/julgran-matkasse-opt.png" type="matkasse" />
+    <div class="flex justify-center">
+      <nuxt-image src="/img/julgran-klapp-opt.png" class="julklapp lg:w-1/4 w-1/3 transform translate-x-6" />
+      <nuxt-image src="/img/julgran-matkasse-opt.png" class="matkasse lg:w-1/4 w-1/3 transform -translate-x-6" />
     </div>
 
     <p>HILLSONG CITY CARE</p>
@@ -103,24 +103,11 @@
 </template>
 
 <script>
-import XmasEntity from '~/components/general/XmasEntity'
-
-export default {
-  components: {
-    XmasEntity
-  }
-}
+export default {}
 </script>
 
 <style lang="postcss" scoped>
 /*! purgecss start ignore */
->>> .julklapp {
-  animation-delay: 1.5s;
-}
->>> .matkasse {
-  animation-delay: 2s;
-}
-
 .rosett >>> img {
   object-fit: contain !important;
 }
