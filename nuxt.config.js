@@ -41,7 +41,17 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: SITE_INFO.sitedescription || process.env.npm_package_description || ''
+        content: SITE_INFO.sitedescription || ''
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: SITE_INFO.sitedescription || ''
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: '/og-image.png'
       }
     ],
     link: [
@@ -125,7 +135,7 @@ export default {
       name: SITE_INFO.sitename || process.env.npm_package_name || '',
       lang: process.env.lang,
       ogHost: process.env.URL,
-      ogImage: '/ogp.png'
+      ogImage: '/og-image.png'
     }
   }
 }
