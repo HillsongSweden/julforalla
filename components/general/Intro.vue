@@ -5,13 +5,13 @@
       :class="{ active: isActive }"
     >
       <div class="max-w-5xl mx-auto flex justify-between">
-        <nuxt-image class="julforalla" src="/ogp.png" alt="En jul för alla" />
+        <nuxt-image class="julforalla" src="/img/enjulforalla.png" alt="En jul för alla" />
 
         <button class="non-a11y bg-accent text-white rounded p-3 px-5" @click="openDrawer">Ge en gåva</button>
       </div>
     </div>
 
-    <nuxt-image src="/ogp.png" alt="En jul för alla" class="julforalla" />
+    <nuxt-image src="/img/enjulforalla.png" alt="En jul för alla" class="julforalla" />
 
     <article class="mx-auto">
       <p>

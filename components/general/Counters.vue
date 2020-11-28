@@ -13,7 +13,7 @@
         {{ matkassar }}
       </p>
       <h4 class="text-black leading-6 text-base xs:text-lg sm:text-2xl">
-        insamlade matkassar<wbr /><span class="whitespace-no-wrap">till familjer</span>
+        insamlade matkassar<wbr /> <span class="whitespace-no-wrap">till familjer</span>
       </h4>
     </div>
   </section>

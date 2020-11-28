@@ -12,7 +12,7 @@
       där vi finns. Vi kommer att distribuera julgåvor i Göteborg, Jönköping, Stockholm och Örebro veckorna innan jul.  
     </p>
 
-    <nuxt-image src="/img/merry-xmas.jpg" class="-mx-5 mt-10 max-h-48" />
+    <nuxt-image src="/img/merry-xmas-opt.jpg" class="-mx-5 mt-10 max-h-48" />
 
     <div>
       <nuxt-image src="/img/single-branch-opt.png" class="w-20 -rotate-18 float-right transform translate-x-8" />
@@ -32,7 +32,7 @@
       familjers ekonomiska utmaningar.
     </p>
 
-    <nuxt-image src="/img/appartments.jpg" class="-mx-10 mt-10" />
+    <nuxt-image src="/img/apartments-opt.jpg" class="-mx-10 mt-10" />
 
     <h2>Organisationer vi samarbetar med under årets julinsamling</h2>
     <p>
@@ -80,7 +80,7 @@
       finns i samhället, som till exempel ekonomisk utsatthet och utanförskap.
     </p>
 
-    <nuxt-image src="/img/rosett.png" class="h-40 rosett" role="presentational" />
+    <nuxt-image src="/img/rosett-opt.png" class="h-40 rosett" role="presentational" />
 
     <p>RÄDDNINGSMISSIONEN - GÖTEBORG</p>
     <p>
