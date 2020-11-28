@@ -1,7 +1,7 @@
 <template>
-  <aside class="aside px-5" :class="{ isOpen }">
-    <div class="fixed z-40 float-left m-2 cursor-pointer" @click="closeDrawer">
-      <svg width="70" height="70" viewBox="48 0 148 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <aside class="aside px-5 pt-5" :class="{ isOpen }">
+    <div class="fixed top-0 left-0 z-40 cursor-pointer back-button" @click="closeDrawer">
+      <svg width="70" height="70" viewBox="0 0 148 148" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M81.9303 46.0148L78.9056 43L50 72L78.9056 101L81.9303 97.9852L56.0298 72L81.9303 46.0148Z"
           fill="black"
