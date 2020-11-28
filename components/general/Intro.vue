@@ -7,7 +7,7 @@
       <div class="max-w-5xl mx-auto flex justify-between">
         <nuxt-image class="julforalla" src="/ogp.png" alt="En jul för alla" />
 
-        <button class="bg-accent text-white rounded p-3 px-5" @click="openDrawer">Ge en gåva</button>
+        <button class="non-a11y bg-accent text-white rounded p-3 px-5" @click="openDrawer">Ge en gåva</button>
       </div>
     </div>
 
@@ -23,7 +23,7 @@
     </article>
 
     <div class="mt-6 text-center text-lg">
-      <button class="bg-accent text-white rounded p-5 px-10" @click="openDrawer" ref="callToAction">Ge en gåva</button>
+      <button class="non-a11y bg-accent text-white rounded p-5 px-10" @click="openDrawer" ref="callToAction">Ge en gåva</button>
     </div>
   </header>
 </template>

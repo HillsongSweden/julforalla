@@ -50,8 +50,8 @@ module.exports = {
         },
         gray: {
           ...defaultTheme.colors.gray,
-          default: '#909090'
-          // 500: '#949494'
+          default: '#666666',
+          weak: '#909090'
         }
       },
       opacity: {
