@@ -36,23 +36,6 @@ export default {
   }
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-@keyframes pulse {
-  from {
-    transform: scale3d(1, 1, 1);
-  }
-  50% {
-    transform: scale3d(1.1, 1.1, 1.1);
-  }
-  to {
-    transform: scale3d(1, 1, 1);
-  }
-}
-.pulse {
-  animation-name: pulse;
-  animation-duration: 0.75s;
-  animation-timing-function: ease-in-out;
-}
 /* @keyframes tada {
   from {
     transform: scale3d(1, 1, 1);
@@ -80,22 +63,22 @@ export default {
   from {
     transform: scale3d(1, 1, 1);
   }
-  1%,
-  2% {
+  2%,
+  4% {
     transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
   }
-  3%,
-  5%,
-  7%,
-  9% {
+  6%,
+  10%,
+  14%,
+  18% {
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
   }
-  4%,
-  6%,
-  8% {
+  8%,
+  12%,
+  16% {
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
   }
-  10%,
+  20%,
   to {
     transform: scale3d(1, 1, 1);
   }
@@ -107,10 +90,10 @@ export default {
 } */
 .tada-delayed {
   animation-name: tadaDelayed;
-  animation-duration: 3.5s;
+  animation-duration: 3.75s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 5;
-  animation-delay: 1s;
+  animation-delay: 1.5s;
 }
 /*! purgecss end ignore */
 </style>

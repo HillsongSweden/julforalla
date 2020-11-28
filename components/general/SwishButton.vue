@@ -10,7 +10,7 @@
 
   <div v-else class="text-center">
     <h3 class="font-sans mt-4 mb-2">Skanna QR-kod med Swish för att ge{{ amount ? ` ${amount} kr` : '' }}</h3>
-    <img :src="qr" alt="QR code" class="block mx-auto rounded-lg" />
+    <figure class="bg-white rounded-lg"><img :src="qr" alt="QR code" class="block mx-auto rounded-lg" /></figure>
     <h3 class="font-sans my-2">Eller skriv in swishnumret: {{ swishNumber.label }}</h3>
   </div>
 </template>
@@ -87,6 +87,10 @@ export default {
 </script>
 
 <style scoped>
+figure {
+  height: 300px;
+  width: 300px;
+}
 img {
   width: 300px;
 }

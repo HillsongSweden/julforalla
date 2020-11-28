@@ -57,6 +57,10 @@ module.exports = {
       opacity: {
         '10': '0.1',
         '20': '0.2'
+      },
+      spacing: {
+        '7': '1.75rem',
+        '14': '3.75rem'
       }
     },
     rotate: {
