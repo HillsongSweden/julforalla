@@ -107,9 +107,10 @@ export default {
 } */
 .tada-delayed {
   animation-name: tadaDelayed;
-  animation-duration: 7.5s;
+  animation-duration: 3.5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 5;
+  animation-delay: 1s;
 }
 /*! purgecss end ignore */
 </style>

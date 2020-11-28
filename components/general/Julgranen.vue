@@ -20,7 +20,7 @@ export default {
 /*! purgecss start ignore */
 .julklapp {
   @apply absolute left-0 bottom-0 overflow-visible !important;
-  animation-delay: 1.5s;
+  animation-delay: 1s;
 }
 .matkasse {
   @apply absolute right-0 bottom-0 overflow-visible !important;

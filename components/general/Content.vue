@@ -12,12 +12,12 @@
       där vi finns. Vi kommer att distribuera julgåvor i Göteborg, Jönköping, Stockholm och Örebro veckorna innan jul.  
     </p>
 
-    <nuxt-image src="/img/merry-xmas.jpg" class="-mx-10 mt-10" />
-    <div class="flex justify-end -mx-10">
-      <nuxt-image src="/img/single-branch-opt.png" class="w-24 transform -translate-y-6 -rotate-18" />
-    </div>
+    <nuxt-image src="/img/merry-xmas.jpg" class="-mx-5 mt-10 max-h-48" />
 
-    <h2>Ökat behov på grund av Corona</h2>
+    <h2>Ökat behov på grund <br />av Corona</h2>
+    <div class="flex justify-end -mx-10">
+      <nuxt-image src="/img/single-branch-opt.png" class="w-20 transform -translate-y-20 -rotate-18" />
+    </div>
     <p>
       Statistik från Rädda Barnen visar att 9,3 % av alla Sveriges barn lever i barnfattigdom. Det motsvarar runt 200
       000 barn. Kommuner vi är i kontakt med säger alla att förfrågningarna från individer som behöver hjälp har ökat på
