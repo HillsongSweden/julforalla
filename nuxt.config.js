@@ -56,7 +56,7 @@ export default {
       {
         hid: 'og:url',
         name: 'og:url',
-        content: process.env.URL || 'http://localhost:3000'
+        content: 'https://enjulföralla.se'
       }
     ],
     link: [
