@@ -52,6 +52,11 @@ export default {
         hid: 'og:image',
         name: 'og:image',
         content: '/og-image.png'
+      },
+      {
+        hid: 'og:url',
+        name: 'og:url',
+        content: process.env.URL || 'http://localhost:3000'
       }
     ],
     link: [
