@@ -40,17 +40,17 @@ export default {
       },
       {
         hid: 'description',
-        name: 'description',
+        property: 'description',
         content: SITE_INFO.sitedescription || ''
       },
       {
         hid: 'og:description',
-        name: 'og:description',
+        property: 'og:description',
         content: SITE_INFO.sitedescription || ''
       },
       {
         hid: 'og:image',
-        name: 'og:image',
+        property: 'og:image',
         content: '/og-image.png'
       },
       {
