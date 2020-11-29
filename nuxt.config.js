@@ -55,7 +55,7 @@ export default {
       },
       {
         hid: 'og:url',
-        name: 'og:url',
+        property: 'og:url',
         content: 'https://enjulföralla.se'
       }
     ],
