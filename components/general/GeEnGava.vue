@@ -152,5 +152,9 @@ export default {
   left: 50px;
   right: -50px;
 }
+
+.back-button {
+  -webkit-tap-highlight-color: transparent;
+}
 /*! purgecss end ignore */
 </style>
