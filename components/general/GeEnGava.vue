@@ -10,12 +10,8 @@
     </div>
 
     <div class="relative mx-auto mt-8" style="height: 106px; width: 139px">
-      <transition name="slide-left">
-        <nuxt-image v-show="formCategory !== 'matkasse'" src="/img/julklapp-opt.png" width="300" height="260" fit="contain" class="absolute inset-0 z-20 transition ease-in-out duration-200 pointer-events-none" :class="{ 'package-right': formCategory === 'julklapp' }" style="position: absolute; overflow: visible;"/>
-      </transition>
-      <transition name="slide-right">
+      <nuxt-image v-show="formCategory !== 'matkasse'" src="/img/julklapp-opt.png" width="300" height="260" fit="contain" class="absolute inset-0 z-20 transition ease-in-out duration-200 pointer-events-none" :class="{ 'package-right': formCategory === 'julklapp' }" style="position: absolute; overflow: visible;"/>
       <nuxt-image v-show="formCategory !== 'julklapp'" src="/img/matkasse-opt.png" width="300" height="260" fit="contain" class="absolute inset-0 z-10 transition ease-in-out duration-200 pointer-events-none" :class="{ 'package-left': formCategory === 'matkasse' }" style="position: absolute; overflow: visible;"/>
-      </transition>
     </div>
 
     <h2 class="text-center mt-2">Ge en gåva</h2>
@@ -145,12 +141,12 @@ export default {
   }
 }
 .package-left {
-  left: -40px;
-  right: 40px;
+  left: -30px;
+  right: 30px;
 }
 .package-right {
-  left: 50px;
-  right: -50px;
+  left: 30px;
+  right: -30px;
 }
 
 .back-button {
