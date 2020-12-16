@@ -6,6 +6,8 @@
     <Julgranen />
     <Content />
 
+    <Sponsors />
+
     <Divider />
   </div>
 </template>
@@ -15,13 +17,15 @@ import Counters from '~/components/general/Counters'
 import Julgranen from '~/components/general/Julgranen'
 import Content from '~/components/general/Content'
 import Divider from '~/components/general/Divider'
+import Sponsors from '~/components/general/Sponsors'
 
 export default {
   components: {
     Counters,
     Julgranen,
     Content,
-    Divider
+    Divider,
+    Sponsors
   },
   head() {
     return {}
