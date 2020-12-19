@@ -34,7 +34,7 @@ export const actions = {
   // },
   async nuxtServerInit({ commit }) {
     // Sponsor collection type
-    let sponsorImages = await require.context('~/static/img/', false, /-sponsor\.png$/)
+    let sponsorImages = await require.context('~/static/img/', false, /-sponsor\./)
     await commit(SET_SPONSOR_POSTS, actions.getImages(sponsorImages))
 
     // // Blog collection type

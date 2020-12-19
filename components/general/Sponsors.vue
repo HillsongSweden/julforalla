@@ -4,7 +4,7 @@
     <div class="w-full max-h-32 flex justify-center align-center my-8">
       <div
         v-for="sponsor in sponsors" :key="sponsor.id"
-        class="flex-initial inline-flex items-center mx-4"
+        class="flex-initial inline-flex items-center mx-4 bg-white rounded-lg p-2"
       >
         <nuxt-image
           :src="`/img/${sponsor}`"
