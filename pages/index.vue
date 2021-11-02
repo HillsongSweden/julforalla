@@ -6,7 +6,7 @@
     <Julgranen />
     <Content />
 
-    <Sponsors />
+    <!-- <Sponsors /> -->
 
     <Divider />
   </div>
