@@ -16,20 +16,24 @@
 
     <div>
       <nuxt-image src="/img/single-branch-opt.png" class="w-20 -rotate-18 float-right transform translate-x-8" />
-      <h2>Ökat behov på grund av Corona</h2>
+      <h2>Din gåva räcker långt</h2>
     </div>
 
     <p>
-      Statistik från Rädda Barnen visar att 9,3 % av alla Sveriges barn lever i barnfattigdom. Det motsvarar runt 200
-      000 barn. Kommuner vi är i kontakt med säger alla att förfrågningarna från individer som behöver hjälp har ökat på
-      grund av den pågående pandemin.
+      Varje krona du ger går oavkortat till att stödja människor som behöver i våra städer.
+      Genom vårt egna sociala arbete City Care och tillsammans med lokala organisationer når vi
+      individer i samhället som verkligen behöver hjälp och uppmuntran denna jul.
+    </p>
+
+    <p>
+      Alla gåvor oavsett storlekar gör det möjligt för oss att tillsammans uppmuntra en individ eller familj.
+      Detta räcker din gåva till<br>
+      500kr = matkasse för en familj<br>
+      200kr = julklapp till hemlös<br>
+      150kr = julklapp till barn & ungdom
     </p>
     <p>
-      Vi har ännu inte någon statistik för hur fattigdomen ökat, men man ser att hushåll som redan innan pandemin hade
-      ekonomiska utmaningar får stora negativa konsekvenser på grund av lönesänkningar eller förlorad inkomst.
-      Utbildningsminister Anna Ekström sa även på en pressträff under november att man inom skolan har ett ökat behov av
-      skolmat på måndagar och fredagar då barn inte får tillräckligt med mat under helgen, vilket är en effekt av
-      familjers ekonomiska utmaningar.
+      Tack vare företag och sponsorer har vi möjlighet att köpa in gåvor och mat till bra priser som gör att vi kan ge mer till fler.
     </p>
 
     <h2>Organisationer vi samarbetar med under årets julinsamling</h2>
