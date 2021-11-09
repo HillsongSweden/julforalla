@@ -12,10 +12,14 @@
 
     <article class="mx-auto">
       <p>
-        Julen är en tid som ska vara full av ljus och glädje, men så är det tyvärr inte för alla. Många familjer runt om
-        i Sverige kämpar i vardagen med att få ihop nog för att betala räkningar. Då kan julen lätt kännas som en extra
-        påfrestning. Där har den senaste säsongen med covid-19 skapat ännu större utmaningar för en del. Därför är vi
-        glada för att vi tillsammans kan få ge av det vi har för att sprida ljus och hopp till människor.
+        Julen är en tid som ska vara full av ljus och glädje, men så är det tyvärr inte för alla.
+        Många individer och familjer runt om i Sverige kämpar i vardagen med att få ihop nog för att betala räkningar.
+        Då kan julen lätt kännas som en extra påfrestning. Därför är vi glada för att vi tillsammans kan få
+        ge av det vi har för att sprida ljus och hopp till människor med fokus på barn,
+        familjer och människor som lever i hemlöshet.
+      </p>
+      <p>
+        I årets en Jul för alla kan du vara med och ge en familj en matkasse, ett barn en julklapp eller en person som är hemlös extra kärlek och uppmuntran.
       </p>
     </article>
 
