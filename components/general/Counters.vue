@@ -1,6 +1,6 @@
 <template>
   <section class="flex justify-between items-start w-full gap-x-4">
-    <div class="flex-1 text-left">
+    <div class="flex-1 text-center">
       <p class="text-5xl text-accent">
         {{ julklapparBarn }}
       </p>
@@ -16,7 +16,7 @@
         insamlade matkassar<wbr /> <span class="whitespace-no-wrap">till familjer</span>
       </h4>
     </div>
-    <div class="flex-1 text-right">
+    <div class="flex-1 text-center">
       <p class="text-5xl text-accent">
         {{ julklapparHemlos }}
       </p>
