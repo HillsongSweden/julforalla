@@ -23,8 +23,8 @@
 export default {
   data() {
     return {
-      julklappar: process.env.counters.julklappar || 100,
-      matkassar: process.env.counters.matkassar || 100
+      julklappar: process.env.counters.julklappar || 0,
+      matkassar: process.env.counters.matkassar || 0
     }
   }
 }
