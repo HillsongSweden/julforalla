@@ -42,8 +42,9 @@ collections:
         editor:
           preview: false
         fields:
-          - { label: Julklappar, name: julklappar, widget: number, hint: 'insamlade julklappar till barn & ungdomar' }
+          - { label: Julklappar Barn, name: julklapparBarn, widget: number, hint: 'insamlade julklappar till barn & ungdomar' }
           - { label: Matkassar, name: matkassar, widget: number, hint: 'insamlade matkassar till familjer' }
+          - { label: Julklappar Hemlös, name: julklapparHemlos, widget: number, hint: 'insamlade julklappar till hemlösa' }
   # - name: 'blog'
   #   label: 'Blog'
   #   # identifier_field: name
