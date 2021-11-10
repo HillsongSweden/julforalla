@@ -1,8 +1,11 @@
 {
   "name": "julforalla",
   "version": "0.0.3",
-  "description": "Site for hsong campaign",
+  "description": "Site for Hillsong Sweden Christmas Social Outreach",
   "author": "Sven Parker <sven@svenparker.com> (https://svenparker.com)",
+  "maintainers": [
+    "Kristoffer Högberg <kristoffer.hogberg@hillsong.se>"
+  ],
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
